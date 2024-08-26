@@ -4,16 +4,7 @@
   <url>
     <loc>https://malcode-site.github.io/2024/08/25/nextjs-beginner/en/</loc>
     
-    <lastmod>2024-08-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://malcode-site.github.io/show/index.html</loc>
-    
-    <lastmod>2024-08-25</lastmod>
+    <lastmod>2024-08-26</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -21,6 +12,15 @@
   
   <url>
     <loc>https://malcode-site.github.io/2024/08/25/nextjs-beginner/zh-cn/</loc>
+    
+    <lastmod>2024-08-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://malcode-site.github.io/show/index.html</loc>
     
     <lastmod>2024-08-25</lastmod>
     
@@ -67,43 +67,43 @@
 
   <url>
     <loc>https://malcode-site.github.io/</loc>
-    <lastmod>2024-08-25</lastmod>
+    <lastmod>2024-08-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://malcode-site.github.io/tags/SEO/</loc>
-    <lastmod>2024-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://malcode-site.github.io/tags/beginner/</loc>
-    <lastmod>2024-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://malcode-site.github.io/tags/nextjs/</loc>
-    <lastmod>2024-08-25</lastmod>
+    <lastmod>2024-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/tags/frontend/</loc>
-    <lastmod>2024-08-25</lastmod>
+    <lastmod>2024-08-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://malcode-site.github.io/tags/SEO/</loc>
+    <lastmod>2024-08-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://malcode-site.github.io/tags/beginner/</loc>
+    <lastmod>2024-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/tags/test/</loc>
-    <lastmod>2024-08-25</lastmod>
+    <lastmod>2024-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -112,35 +112,35 @@
   
   <url>
     <loc>https://malcode-site.github.io/categories/SEO/</loc>
-    <lastmod>2024-08-25</lastmod>
+    <lastmod>2024-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/categories/nextjs/</loc>
-    <lastmod>2024-08-25</lastmod>
+    <lastmod>2024-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/categories/SEO/beginner/</loc>
-    <lastmod>2024-08-25</lastmod>
+    <lastmod>2024-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/categories/test/</loc>
-    <lastmod>2024-08-25</lastmod>
+    <lastmod>2024-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/categories/nextjs/frontend/</loc>
-    <lastmod>2024-08-25</lastmod>
+    <lastmod>2024-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
