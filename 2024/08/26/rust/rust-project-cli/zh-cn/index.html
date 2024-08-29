@@ -1,0 +1,806 @@
+
+<!DOCTYPE html><html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.1" theme-name="Stellar"
+          theme-version="1.29.1">
+    
+    <meta name="generator" content="Hexo 6.3.0">
+    <meta http-equiv='x-dns-prefetch-control' content='on'/>
+    
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+    <meta name="theme-color" content="#f9fafb">
+
+    <title>使用Clap创建rust前端项目初始化脚手架 - MalCoder</title>
+
+    
+        <meta name="description" content="使用Clap创建rust前端项目初始化脚手架">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Clap创建rust前端项目初始化脚手架">
+<meta property="og:url" content="https://malcode-site.github.io/2024/08/26/rust/rust-project-cli/zh-cn/index.html">
+<meta property="og:site_name" content="MalCoder">
+<meta property="og:description" content="使用Clap创建rust前端项目初始化脚手架">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/malred/malcode-site-photos/master/img/20240829084102.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malred/malcode-site-photos/master/img/20240828231136.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malred/malcode-site-photos/master/img/20240828231349.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malred/malcode-site-photos/master/img/20240829093737.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malred/malcode-site-photos/master/img/20240829093839.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malred/malcode-site-photos/master/img/20240829094019.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malred/malcode-site-photos/master/img/20240829124632.png">
+<meta property="article:published_time" content="2024-08-26T12:18:18.000Z">
+<meta property="article:modified_time" content="2024-08-29T04:50:31.400Z">
+<meta property="article:author" content="Malred">
+<meta property="article:tag" content="rust">
+<meta property="article:tag" content="CLI">
+<meta property="article:tag" content="command app">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/malred/malcode-site-photos/master/img/20240829084102.png">
+<meta name="twitter:creator" content="@david_clar59790">
+    
+    
+
+    <meta name="keywords" content="rust,CLI,command app">
+
+    <!-- feed -->
+    
+        <link rel="alternate" href="/atom.xml" title="MalCoder" type="application/atom+xml">
+    
+
+    <link rel="stylesheet" href="/css/main.css?v=1.29.1">
+
+    
+        <link rel="shortcut icon" href="https://www.freeimg.cn/i/2024/08/22/66c6f7842729a.png">
+    
+
+    
+
+    
+
+    <!-- malred google ads -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1267519437013349"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://www.freeimg.cn/i/2024/08/22/66c6f7842729a.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">MalCoder</div><div class="sub normal cap">stay hungry, stay foolish</div><div class="sub hover cap" style="opacity:0"> Program guidance for beginners</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+
+<nav class="menu dis-select"><a class="nav-item" title="Home" href="/" style="color:#1BCDFC"><span>Home</span></a><a class="nav-item" title="about" href="/about/"><span>about</span></a><a class="nav-item" title="Portfolio" href="/show/"><span>Portfolio</span></a></nav>
+</div>
+<div class="widgets">
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">专栏：rust-cli</span></div><div class="widget-body"><a class="item" href="/2024/08/26/rust/rust-project-cli/en/"><span class="title">Creating a Rust Front-End Project Initialization Scaffolding Using Clap</span></a><a class="item active" href="/2024/08/26/rust/rust-project-cli/zh-cn/"><span class="title">使用Clap创建rust前端项目初始化脚手架</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a></div></widget>
+
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="atom.xml"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19q0-.825.588-1.412T5 17q.825 0 1.413.588T7 19q0 .825-.587 1.413T5 21m13.5 0q-.65 0-1.088-.475T16.9 19.4q-.275-2.425-1.312-4.537T12.9 11.1q-1.65-1.65-3.762-2.687T4.6 7.1q-.65-.075-1.125-.512T3 5.5q0-.65.45-1.062t1.075-.363q3.075.275 5.763 1.563t4.737 3.337q2.05 2.05 3.338 4.738t1.562 5.762q.05.625-.363 1.075T18.5 21m-6 0q-.625 0-1.075-.437T10.85 19.5q-.225-1.225-.787-2.262T8.65 15.35q-.85-.85-1.888-1.412T4.5 13.15q-.625-.125-1.062-.575T3 11.5q0-.65.45-1.075t1.075-.325q1.825.25 3.413 1.063t2.837 2.062q1.25 1.25 2.063 2.838t1.062 3.412q.1.625-.325 1.075T12.5 21"/></svg></a></div><div class="widget-body fs14"><a class="item title" href="/2024/08/26/rust/rust-project-cli/en/"><span class="title">Creating a Rust Front-End Project Initialization Scaffolding Using Clap</span></a><a class="item title" href="/2024/08/26/rust/rust-project-cli/zh-cn/"><span class="title">使用Clap创建rust前端项目初始化脚手架</span></a><a class="item title" href="/2024/08/27/nextjs/nextjs-beginner-themes/en/"><span class="title">Next.js uses next-themes to implement a bright and dark theme switcher.</span></a><a class="item title" href="/2024/08/27/nextjs/nextjs-beginner-themes/zh-cn/"><span class="title">nextjs使用next-themes实现明亮黑暗主题切换</span></a><a class="item title" href="/2024/08/25/nextjs/nextjs-beginner/en/"><span class="title">Getting Started with Next.js - v13</span></a></div></widget>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/malred" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://www.svgrepo.com/show/512317/github-142.svg"/></a></div></footer>
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" id="menu" href="/topic">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/2024/08/26/rust/rust-project-cli/en/">rust-cli</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-26T12:18:18.000Z">2024-08-26</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-08-29T04:50:31.400Z">2024-08-29</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>使用Clap创建rust前端项目初始化脚手架</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><h1 id="本文目标"><a href="#本文目标" class="headerlink" title="本文目标"></a>本文目标</h1><p>该文章将带你使用rust和clap库实现一个创建前端vite项目的脚手架工具</p>
+<h1 id="git仓库"><a href="#git仓库" class="headerlink" title="git仓库"></a>git仓库</h1><p>本文基于我的开源项目rust-init-cli改编</p>
+<div class="tag-plugin link dis-select"><a class="link-card plain" title="malred: rust-init-cli" href="https://github.com/malred/rust-init-cli.git" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill=""><div class="left"><span class="title">malred: rust-init-cli</span><span class="cap link footnote">https://github.com/malred/rust-init-cli.git</span></div><div class="right"><div class="lazy img" data-bg="https://www.svgrepo.com/show/512317/github-142.svg"></div></div></a></div>
+
+<h1 id="第一步-初始化项目"><a href="#第一步-初始化项目" class="headerlink" title="第一步: 初始化项目"></a>第一步: 初始化项目</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><div class="tag-plugin colorful note" color="green" child="codeblock"><div class="body"><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cargo init rust-vite-cli</span><br><span class="line">cd rust-vite-cli</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">如果你用vscode, 可以用这个命令打开</span></span><br><span class="line">code . </span><br></pre></td></tr></table></figure></div></div>
+
+<h2 id="依赖安装"><a href="#依赖安装" class="headerlink" title="依赖安装"></a>依赖安装</h2><div class="tag-plugin colorful note" color="green" child="codeblock"><div class="body"><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cargo add clap</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">or</span> </span><br><span class="line">cargo add clap -F derive </span><br></pre></td></tr></table></figure></div></div>
+
+<h1 id="第二步-clap读取命令行"><a href="#第二步-clap读取命令行" class="headerlink" title="第二步: clap读取命令行"></a>第二步: clap读取命令行</h1><div class="tag-plugin link dis-select"><a class="link-card plain" title="clap - cargo" href="https://docs.rs/clap/latest/clap/" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill=""><div class="left"><span class="title">clap - cargo</span><span class="cap link footnote">https://docs.rs/clap/latest/clap/</span></div><div class="right"><div class="lazy img" data-bg="https://www.svgrepo.com/show/374056/rust.svg"></div></div></a></div>
+<div class="tag-plugin link dis-select"><a class="link-card plain" title="clap文档" href="https://rust-cli.github.io/book/index.html" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill=""><div class="left"><span class="title">clap文档</span><span class="cap link footnote">https://rust-cli.github.io/book/index.html</span></div><div class="right"><div class="lazy img" data-bg="https://www.svgrepo.com/show/512317/github-142.svg"></div></div></a></div>
+
+<h2 id="Args结构体"><a href="#Args结构体" class="headerlink" title="Args结构体"></a>Args结构体</h2><p>创建一个结构体来接收命令行参数</p>
+<div class="tag-plugin colorful note" color="blue" child="codeblock"><div class="body"><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#[derive(Parser)]</span></span><br><span class="line"><span class="meta">#[command()]</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Args</span> &#123;</span><br><span class="line">    <span class="meta">#[command(subcommand)]</span></span><br><span class="line">    command: <span class="type">Option</span>&lt;Commands&gt;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></div>
+
+<p>关于subcommand, 大概就是可以用在结构体和枚举等类型上</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">/// 从源代码找的注释</span><br><span class="line">/// Parse a sub-command into a user-defined enum.</span><br><span class="line">///</span><br><span class="line">/// Implementing this trait lets a parent container delegate subcommand behavior to `Self`.</span><br><span class="line">/// with:</span><br><span class="line">/// - `#[command(subcommand)] field: SubCmd`: Attribute can be used with either struct fields or enum</span><br><span class="line">///   variants that impl `Subcommand`.</span><br><span class="line">/// - `#[command(flatten)] Variant(SubCmd)`: Attribute can only be used with enum variants that impl</span><br><span class="line">///   `Subcommand`.</span><br><span class="line">///</span><br><span class="line">/// **NOTE:** Deriving requires the `derive` feature flag</span><br></pre></td></tr></table></figure>
+
+<h2 id="Commands结构体"><a href="#Commands结构体" class="headerlink" title="Commands结构体"></a>Commands结构体</h2><p>我们实现Commands结构体, 结构体的属性会对应命令</p>
+<div class="tag-plugin colorful note" color="blue" child="codeblock"><div class="body"><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// clap可以通过反射宏读取注释, 在help时打印出来</span></span><br><span class="line"><span class="meta">#[derive(Subcommand)]</span></span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">Commands</span> &#123;</span><br><span class="line">    <span class="comment">/// create-vite</span></span><br><span class="line">    CreateVite</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></div>
+
+<p>接下来, 在main函数中读取</p>
+<div class="tag-plugin colorful note" color="blue" child="codeblock"><div class="body"><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">cli</span> = Args::<span class="title function_ invoke__">parse</span>();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">match</span> cli.command &#123;</span><br><span class="line">        <span class="title function_ invoke__">Some</span>(Commands::CreateVite) =&gt; <span class="built_in">println!</span>(<span class="string">&quot;create vite!&quot;</span>),</span><br><span class="line">        <span class="literal">None</span> =&gt; &#123;</span><br><span class="line">            <span class="built_in">println!</span>(<span class="string">&quot;Run with --help to see instructions.&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></div>
+
+<p>运行!</p>
+<div class="tag-plugin colorful note" color="green" child="codeblock"><div class="body"><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cargo run -- create-vite</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">or</span> </span><br><span class="line">cargo run --release create-vite</span><br></pre></td></tr></table></figure></div></div>
+
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malred/malcode-site-photos/master/img/20240829084102.png" alt="如果运行help命令" data-fancybox="true"/></div><div class="image-meta"><span class="image-caption center">如果运行help命令</span></div></div>
+
+<h1 id="第三步-从vite脚手架中复制项目模板"><a href="#第三步-从vite脚手架中复制项目模板" class="headerlink" title="第三步: 从vite脚手架中复制项目模板"></a>第三步: 从vite脚手架中复制项目模板</h1><p>我们并没有采用从网络获取前端项目模板的实现方法, 而是使用将前端项目模板保存到目录, 当创建项目时再复制到目标目录的实现方式,<br>这种方式当然有坏处, 比如会让项目过大, 要手动将目录放到build后的文件夹等, 但是好处是实现起来比较简单方便</p>
+<h2 id="使用vite脚手架创建项目"><a href="#使用vite脚手架创建项目" class="headerlink" title="使用vite脚手架创建项目"></a>使用vite脚手架创建项目</h2><p>我们先用vite脚手架创建项目, 然后再将项目复制到我们项目的public文件夹中</p>
+<div class="tag-plugin colorful note" color="green" child="codeblock"><div class="body"><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm create vite</span><br></pre></td></tr></table></figure></div></div>
+
+<p>我们只创建vue+js&#x2F;vue+ts&#x2F;react+js&#x2F;react+ts这4个项目</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malred/malcode-site-photos/master/img/20240828231136.png" alt="创建示例" data-fancybox="true"/></div><div class="image-meta"><span class="image-caption center">创建示例</span></div></div>
+
+<p>创建完后, 复制到项目的public文件夹下</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malred/malcode-site-photos/master/img/20240828231349.png" alt="目录结构如图" data-fancybox="true"/></div><div class="image-meta"><span class="image-caption center">目录结构如图</span></div></div>
+
+<h1 id="第四步-编写需要用到的方法"><a href="#第四步-编写需要用到的方法" class="headerlink" title="第四步: 编写需要用到的方法"></a>第四步: 编写需要用到的方法</h1><p>创建common.rs, 我们在其中存放通用的工具类方法</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">src/</span><br><span class="line">    common.rs</span><br><span class="line">    main.rs</span><br></pre></td></tr></table></figure>
+
+<p>将common模块引入main.rs</p>
+<div class="tag-plugin colorful note" color="blue" child="codeblock"><div class="body"><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.rs</span></span><br><span class="line"><span class="keyword">mod</span> common;</span><br></pre></td></tr></table></figure></div></div>
+
+<h2 id="读取命令行输入的方法"><a href="#读取命令行输入的方法" class="headerlink" title="读取命令行输入的方法"></a>读取命令行输入的方法</h2><div class="tag-plugin colorful note" color="blue" child="codeblock"><div class="body"><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// common.rs</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 读取输入</span></span><br><span class="line"><span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">read_line</span>() <span class="punctuation">-&gt;</span> <span class="type">String</span> &#123;</span><br><span class="line">    <span class="comment">// 用来存放用户输入的字符串</span></span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">input</span> = <span class="type">String</span>::<span class="title function_ invoke__">new</span>();</span><br><span class="line">    <span class="comment">// 读取命令行输入</span></span><br><span class="line">    std::io::<span class="title function_ invoke__">stdin</span>()</span><br><span class="line">        .<span class="title function_ invoke__">read_line</span>(&amp;<span class="keyword">mut</span> input)</span><br><span class="line">        .<span class="title function_ invoke__">expect</span>(<span class="string">&quot;Stdin not working&quot;</span>);</span><br><span class="line">    input.<span class="title function_ invoke__">trim</span>().<span class="title function_ invoke__">to_string</span>()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></div>
+
+<h2 id="复制文件到指定目录的方法"><a href="#复制文件到指定目录的方法" class="headerlink" title="复制文件到指定目录的方法"></a>复制文件到指定目录的方法</h2><div class="tag-plugin colorful note" color="blue" child="codeblock"><div class="body"><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// common.rs</span></span><br><span class="line"><span class="keyword">use</span> std::&#123;fs, io, path::Path&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 复制文件夹到指定路径</span></span><br><span class="line"><span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">copy_dir_all</span>(src: <span class="keyword">impl</span> <span class="title class_">AsRef</span>&lt;Path&gt;, dst: <span class="keyword">impl</span> <span class="title class_">AsRef</span>&lt;Path&gt;) <span class="punctuation">-&gt;</span> io::<span class="type">Result</span>&lt;()&gt; &#123;</span><br><span class="line">    <span class="comment">// fs::create_dir_all(&amp;dst)?;</span></span><br><span class="line">    fs::<span class="title function_ invoke__">create_dir_all</span>(&amp;dst).<span class="title function_ invoke__">expect</span>(<span class="string">&quot;创建dst目录失败&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// println!(&quot;遍历&quot;);</span></span><br><span class="line">    fs::<span class="title function_ invoke__">read_dir</span>(&amp;src).<span class="title function_ invoke__">expect</span>(<span class="string">&quot;找不到src目录&quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> <span class="variable">entry</span> <span class="keyword">in</span> fs::<span class="title function_ invoke__">read_dir</span>(src)? &#123;</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">entry</span> = entry?;</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">ty</span> = entry.<span class="title function_ invoke__">file_type</span>()?;</span><br><span class="line">        <span class="keyword">if</span> ty.<span class="title function_ invoke__">is_dir</span>() &#123;</span><br><span class="line">            <span class="title function_ invoke__">copy_dir_all</span>(entry.<span class="title function_ invoke__">path</span>(), dst.<span class="title function_ invoke__">as_ref</span>().<span class="title function_ invoke__">join</span>(entry.<span class="title function_ invoke__">file_name</span>()))?;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            fs::<span class="title function_ invoke__">copy</span>(entry.<span class="title function_ invoke__">path</span>(), dst.<span class="title function_ invoke__">as_ref</span>().<span class="title function_ invoke__">join</span>(entry.<span class="title function_ invoke__">file_name</span>()))?;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// println!(&quot;copy dir done.&quot;);</span></span><br><span class="line">    <span class="title function_ invoke__">Ok</span>(())</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></div>
+
+<h2 id="获取运行时目录位置的方法"><a href="#获取运行时目录位置的方法" class="headerlink" title="获取运行时目录位置的方法"></a>获取运行时目录位置的方法</h2><p>我原本希望能让程序在运行时找到src下的public文件夹, 但是发现不行, 后面找到可以获取运行时目录的方法,<br>这样就可以把public文件复制到target下的debug或release里, 让程序不管在什么地方运行都可以找到public里的文件,<br>并开始复制</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">src/</span><br><span class="line">    main.rs</span><br><span class="line">target/</span><br><span class="line">    cargo run运行时的current_exe目录</span><br><span class="line">    debug/</span><br><span class="line">        public/...</span><br><span class="line">    cargo build之后运行exe时的current_exe目录</span><br><span class="line">    release/</span><br><span class="line">        public/...</span><br></pre></td></tr></table></figure>
+
+<div class="tag-plugin colorful note" color="blue" child="codeblock"><div class="body"><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// common.rs</span></span><br><span class="line"><span class="keyword">use</span> std::&#123;fs, path::Path, env::current_exe&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取运行时目录</span></span><br><span class="line"><span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">current_exe_pkg</span>() <span class="punctuation">-&gt;</span> <span class="type">String</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">pkg_name</span> = <span class="built_in">env!</span>(<span class="string">&quot;CARGO_PKG_NAME&quot;</span>);</span><br><span class="line">    <span class="comment">// println!(&quot;&#123;pkg_name&#125;.exe&quot;);</span></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">pkg_name</span> = pkg_name.<span class="title function_ invoke__">to_string</span>() + <span class="string">&quot;.exe&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 获取当前目录的路径</span></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">current_exe</span> = <span class="title function_ invoke__">current_exe</span>().<span class="title function_ invoke__">unwrap</span>();</span><br><span class="line">    current_exe.<span class="title function_ invoke__">display</span>().<span class="title function_ invoke__">to_string</span>().<span class="title function_ invoke__">replace</span>(&amp;pkg_name, <span class="string">&quot;&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></div>
+
+<div class="tag-plugin link dis-select"><a class="link-card plain" title="关于env!的解释" href="https://doc.rust-lang.org/std/env/index.html" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill=""><div class="left"><span class="title">关于env!的解释</span><span class="cap link footnote">https://doc.rust-lang.org/std/env/index.html</span></div><div class="right"><div class="lazy img" data-bg="https://www.svgrepo.com/show/374056/rust.svg"></div></div></a></div>
+
+<h1 id="第五步-创建项目的逻辑"><a href="#第五步-创建项目的逻辑" class="headerlink" title="第五步: 创建项目的逻辑"></a>第五步: 创建项目的逻辑</h1><p>在做完了前面的准备工作后, 终于要开始编写了创建项目的逻辑了. 这一步的内容都放在vite.rs里</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">src/</span><br><span class="line">    main.rs</span><br><span class="line">    vite.rs</span><br></pre></td></tr></table></figure>
+
+<div class="tag-plugin colorful note" color="blue" child="codeblock"><div class="body"><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.rs</span></span><br><span class="line"><span class="keyword">mod</span> vite;</span><br></pre></td></tr></table></figure></div></div>
+
+<h2 id="保存用户输入的结构体"><a href="#保存用户输入的结构体" class="headerlink" title="保存用户输入的结构体"></a>保存用户输入的结构体</h2><p>为了保存用户输入, 以便后续根据输入的选项创建不同的项目, 我们需要一个结构体来保存这些数据</p>
+<div class="tag-plugin colorful note" color="blue" child="codeblock"><div class="body"><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// vite.rs</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 用户使用什么框架</span></span><br><span class="line"><span class="meta">#[derive(Debug)]</span></span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">FrameworkType</span> &#123;</span><br><span class="line">    React,</span><br><span class="line">    Vue,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 用户是否使用ts</span></span><br><span class="line"><span class="meta">#[derive(Debug)]</span></span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">VariantType</span> &#123;</span><br><span class="line">    Javascript,</span><br><span class="line">    Typescript,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#[derive(Debug)]</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">UserSelected</span> &#123;</span><br><span class="line">    framework_type: FrameworkType,</span><br><span class="line">    variant_type: VariantType,</span><br><span class="line">    project_name: <span class="type">String</span>, <span class="comment">// 项目名称</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></div>
+
+<h2 id="为结构体添加方法"><a href="#为结构体添加方法" class="headerlink" title="为结构体添加方法"></a>为结构体添加方法</h2><p>我们需要两个方法, 一个是创建结构体的方法, 一个是创建项目的方法</p>
+<div class="tag-plugin colorful note" color="blue" child="codeblock"><div class="body"><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// vite.rs</span></span><br><span class="line"><span class="keyword">use</span> std::path::Path;</span><br><span class="line"><span class="keyword">use</span> crate::common::&#123;copy_dir_all, current_exe_pkg, read_line&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">UserSelected</span> &#123;</span><br><span class="line">    <span class="keyword">fn</span> <span class="title function_">new</span>(project_name: &amp;<span class="type">str</span>, framework: &amp;<span class="type">str</span>, variant: &amp;<span class="type">str</span>) <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">framework_type</span> = <span class="keyword">match</span> framework &#123;</span><br><span class="line">            <span class="string">&quot;react&quot;</span> =&gt; &#123;</span><br><span class="line">                FrameworkType::React</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="string">&quot;vue&quot;</span> =&gt; &#123;</span><br><span class="line">                FrameworkType::Vue</span><br><span class="line">            &#125;</span><br><span class="line">            _ =&gt; &#123;</span><br><span class="line">                <span class="comment">// panic!(&quot;No such framework type&quot;)</span></span><br><span class="line">                <span class="comment">// default</span></span><br><span class="line">                FrameworkType::React</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">let</span> <span class="variable">variant_type</span> = <span class="keyword">match</span> variant &#123;</span><br><span class="line">            <span class="string">&quot;javascript&quot;</span> =&gt; &#123;</span><br><span class="line">                VariantType::Javascript</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="string">&quot;typescript&quot;</span> =&gt; &#123;</span><br><span class="line">                VariantType::Typescript</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="string">&quot;js&quot;</span> =&gt; &#123;</span><br><span class="line">                VariantType::Javascript</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="string">&quot;ts&quot;</span> =&gt; &#123;</span><br><span class="line">                VariantType::Typescript</span><br><span class="line">            &#125;</span><br><span class="line">            _ =&gt; &#123;</span><br><span class="line">                <span class="comment">// panic!(&quot;No such variant type&quot;)</span></span><br><span class="line">                VariantType::Typescript</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">let</span> <span class="variable">project_name</span> = <span class="keyword">if</span> project_name.<span class="title function_ invoke__">is_empty</span>() &#123;</span><br><span class="line">            <span class="string">&quot;vite-project&quot;</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123; project_name &#125;;</span><br><span class="line"></span><br><span class="line">        UserSelected &#123;</span><br><span class="line">            project_name: project_name.<span class="title function_ invoke__">to_string</span>(),</span><br><span class="line">            framework_type: framework_type,</span><br><span class="line">            variant_type: variant_type,</span><br><span class="line">            <span class="comment">// file_name: &quot;&quot;.to_string(),</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建文件</span></span><br><span class="line">    <span class="keyword">fn</span> <span class="title function_">init</span>(&amp;<span class="keyword">self</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">path</span> = <span class="string">&quot;public/vite/&quot;</span>.<span class="title function_ invoke__">to_string</span>();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">match</span> <span class="keyword">self</span>.framework_type &#123;</span><br><span class="line">            FrameworkType::React =&gt; &#123;</span><br><span class="line">                path += <span class="string">&quot;react&quot;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            FrameworkType::Vue =&gt; &#123;</span><br><span class="line">                path += <span class="string">&quot;vue&quot;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        path += <span class="string">&quot;-&quot;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">match</span> <span class="keyword">self</span>.variant_type &#123;</span><br><span class="line">            VariantType::Javascript =&gt; &#123;</span><br><span class="line">                path += <span class="string">&quot;js&quot;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            VariantType::Typescript =&gt; &#123;</span><br><span class="line">                path += <span class="string">&quot;ts&quot;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">println!</span>(<span class="string">&quot;复制 &#123;&#125;&quot;</span>, &amp;(<span class="title function_ invoke__">current_exe_pkg</span>() + &amp;path));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// todo: 从网络上下载 或 调用cmd git clone</span></span><br><span class="line"></span><br><span class="line">        <span class="title function_ invoke__">copy_dir_all</span>(</span><br><span class="line">            Path::<span class="title function_ invoke__">new</span>(</span><br><span class="line">                &amp;(<span class="title function_ invoke__">current_exe_pkg</span>() + &amp;path)</span><br><span class="line">            ),</span><br><span class="line">            Path::<span class="title function_ invoke__">new</span>(&amp;<span class="keyword">self</span>.project_name),</span><br><span class="line">        ).<span class="title function_ invoke__">unwrap</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></div>
+
+<h2 id="询问并接收用户输入"><a href="#询问并接收用户输入" class="headerlink" title="询问并接收用户输入"></a>询问并接收用户输入</h2><div class="tag-plugin colorful note" color="blue" child="codeblock"><div class="body"><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// vite.rs</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">create_vite_project</span>() &#123;</span><br><span class="line">    <span class="comment">// project name</span></span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;your project name? &#123;&#125;&quot;</span>, <span class="string">&quot;vite-project&quot;</span>);</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">project_name</span> = <span class="title function_ invoke__">read_line</span>();</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">project_name</span> = <span class="keyword">if</span> project_name.<span class="title function_ invoke__">is_empty</span>() &#123;</span><br><span class="line">        <span class="string">&quot;vite-project&quot;</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        &amp;project_name</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, (&amp;project_name));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// select a framework</span></span><br><span class="line">    <span class="comment">// react vue ...</span></span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;select a framework: (default: react)&quot;</span>);</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;react&quot;</span>);</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;vue&quot;</span>);</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">framework</span> = <span class="title function_ invoke__">read_line</span>().<span class="title function_ invoke__">to_lowercase</span>();</span><br><span class="line">    framework = <span class="keyword">match</span> framework.<span class="title function_ invoke__">as_str</span>() &#123;</span><br><span class="line">        <span class="string">&quot;r&quot;</span> =&gt; <span class="string">&quot;react&quot;</span>.<span class="title function_ invoke__">to_string</span>(),</span><br><span class="line">        <span class="string">&quot;react&quot;</span> =&gt; <span class="string">&quot;react&quot;</span>.<span class="title function_ invoke__">to_string</span>(),</span><br><span class="line">        <span class="string">&quot;v&quot;</span> =&gt; <span class="string">&quot;vue&quot;</span>.<span class="title function_ invoke__">to_string</span>(),</span><br><span class="line">        <span class="string">&quot;vue&quot;</span> =&gt; <span class="string">&quot;vue&quot;</span>.<span class="title function_ invoke__">to_string</span>(),</span><br><span class="line">        _ =&gt; <span class="string">&quot;react&quot;</span>.<span class="title function_ invoke__">to_string</span>(),</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, (&amp;framework));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// select a variant</span></span><br><span class="line">    <span class="comment">// javascript typescript ...</span></span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;select a variant: (default: ts)&quot;</span>);</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;typescript(ts)&quot;</span>);</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;javascript(js)&quot;</span>);</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">variant</span> = <span class="title function_ invoke__">read_line</span>().<span class="title function_ invoke__">to_lowercase</span>();</span><br><span class="line">    variant = <span class="keyword">match</span> variant.<span class="title function_ invoke__">as_str</span>() &#123;</span><br><span class="line">        <span class="string">&quot;ts&quot;</span> =&gt; <span class="string">&quot;typescript&quot;</span>.<span class="title function_ invoke__">to_string</span>(),</span><br><span class="line">        <span class="string">&quot;typescript&quot;</span> =&gt; <span class="string">&quot;typescript&quot;</span>.<span class="title function_ invoke__">to_string</span>(),</span><br><span class="line">        <span class="string">&quot;js&quot;</span> =&gt; <span class="string">&quot;javascript&quot;</span>.<span class="title function_ invoke__">to_string</span>(),</span><br><span class="line">        <span class="string">&quot;javascript&quot;</span> =&gt; <span class="string">&quot;javascript&quot;</span>.<span class="title function_ invoke__">to_string</span>(),</span><br><span class="line">        _ =&gt; <span class="string">&quot;typescript&quot;</span>.<span class="title function_ invoke__">to_string</span>(),</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, (&amp;variant));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">user_select</span> = UserSelected::<span class="title function_ invoke__">new</span>(&amp;project_name, &amp;framework, &amp;variant);</span><br><span class="line"></span><br><span class="line">    user_select.<span class="title function_ invoke__">init</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></div>
+
+<h1 id="第六步-测试"><a href="#第六步-测试" class="headerlink" title="第六步: 测试"></a>第六步: 测试</h1><h2 id="修改main-rs"><a href="#修改main-rs" class="headerlink" title="修改main.rs"></a>修改main.rs</h2><div class="tag-plugin colorful note" color="blue" child="codeblock"><div class="body"><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.rs</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">cli</span> = Args::<span class="title function_ invoke__">parse</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">match</span> cli.command &#123;</span><br><span class="line">        <span class="title function_ invoke__">Some</span>(Commands::CreateVite) =&gt; <span class="title function_ invoke__">create_vite_project</span>(),</span><br><span class="line">        <span class="literal">None</span> =&gt; &#123;</span><br><span class="line">            <span class="built_in">println!</span>(<span class="string">&quot;Run with --help to see instructions.&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></div>
+
+<h2 id="测试cargo-run"><a href="#测试cargo-run" class="headerlink" title="测试cargo run"></a>测试cargo run</h2><p>将public目录移动到target&#x2F;debug目录</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malred/malcode-site-photos/master/img/20240829093737.png" data-fancybox="true"/></div></div>
+
+<p>测试cargo run时能否成功</p>
+<div class="tag-plugin colorful note" color="green" child="codeblock"><div class="body"><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cargo run -- create-vite</span><br></pre></td></tr></table></figure></div></div>
+<p>可以看到在项目根目录成功创建了vite-project目录</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malred/malcode-site-photos/master/img/20240829093839.png" data-fancybox="true"/></div></div>
+
+<h2 id="测试cargo-build后的exe"><a href="#测试cargo-build后的exe" class="headerlink" title="测试cargo build后的exe"></a>测试cargo build后的exe</h2><p>先复制public目录到target&#x2F;release目录</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malred/malcode-site-photos/master/img/20240829094019.png" data-fancybox="true"/></div></div>
+<div class="tag-plugin colorful note" color="green" child="codeblock"><div class="body"><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cargo build --release</span><br><span class="line">.\target\release\rust-vite-cli.exe create-vite</span><br></pre></td></tr></table></figure></div></div>
+
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malred/malcode-site-photos/master/img/20240829124632.png" data-fancybox="true"/></div></div>
+
+<h1 id="end"><a href="#end" class="headerlink" title="end"></a>end</h1><p>接下来, 你可以将release目录的文件复制到系统的任意目录, 然后将其配置到系统环境变量, 就可以随时随地运行 rust-vite-cli<br>create-vite 来创建前端项目了.</p>
+<p>感谢观看</p>
+
+<div class="article-footer fs14">
+    <section id="references">
+      <div class="header"><span>参考资料</span></div>
+      <div class="body">
+        <ul>
+        <li class="post-title">
+          <p><a target="_blank" rel="noopener" href="https://www.svgrepo.com/">本文用到的所有svg图标来源</a></p>
+
+        </li>
+        </ul>
+      </div>
+    </section>
+    
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    
+    <section id="share">
+      <div class="header"><span>分享文章</span></div>
+      <div class="body">
+        <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://malcode-site.github.io/2024/08/26/rust/rust-project-cli/zh-cn/" /></div>
+        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot;)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg" /></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://malcode-site.github.io/2024/08/26/rust/rust-project-cli/zh-cn/&title=使用Clap创建rust前端项目初始化脚手架 - MalCoder&summary=使用Clap创建rust前端项目初始化脚手架"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg" /></a><a class="social share-item email" href="mailto:?subject=使用Clap创建rust前端项目初始化脚手架 - MalCoder&amp;body=https://malcode-site.github.io/2024/08/26/rust/rust-project-cli/zh-cn/"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg" /></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg" /></a></div>
+        
+        <div class="qrcode" id="qrcode-wechat" style="opacity:0;height:0">
+          <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://malcode-site.github.io/2024/08/26/rust/rust-project-cli/zh-cn/"/>
+        </div>
+        
+      </div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/08/27/nextjs/nextjs-beginner-themes/en/">Next.js uses next-themes to implement a bright and dark theme switcher.</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/08/26/rust/rust-project-cli/en/">Creating a Rust Front-End Project Initialization Scaffolding Using Clap</a></div></section></div>
+
+<div class="related-wrap" id="related-posts">
+    <section class='header'>
+      <div class='title cap theme'>您可能感兴趣的文章</div>
+    </section>
+    <section class='body'>
+    <div class="related-posts"><a class="item" href="\2024\08\26\rust\rust-project-cli\en\" title="Creating a Rust Front-End Project Initialization Scaffolding Using Clap"><span class="title">Creating a Rust Front-End Project Initialization Scaffolding Using Clap</span><span class="excerpt">Creating a Rust Front-End Project Initialization Scaffolding Using Clap</span></a></div></section></div>
+
+
+  <div class="related-wrap md-text" id="comments">
+    <section class='header cmt-title cap theme'>
+      <p>快来参与讨论吧~</p>
+
+    </section>
+    <section class='body cmt-body giscus'>
+      
+
+<svg class="loading" style="vertical-align:middle;fill:currentColor;overflow:hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
+
+<div id="giscus" src="https://giscus.app/client.js" data-repo="malred/blog-comments" data-repo-id="R_kgDOMnkzJw" data-category="Announcements" data-category-id="DIC_kwDOMnkzJ84Ch4_O" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous"></div>
+
+    </section>
+  </div>
+
+
+
+<footer class="page-footer footnote"><hr><div class="text"><p><span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span></p>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E6%96%87%E7%9B%AE%E6%A0%87"><span class="toc-text">本文目标</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git%E4%BB%93%E5%BA%93"><span class="toc-text">git仓库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5-%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE"><span class="toc-text">第一步: 初始化项目</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%9D%E8%B5%96%E5%AE%89%E8%A3%85"><span class="toc-text">依赖安装</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5-clap%E8%AF%BB%E5%8F%96%E5%91%BD%E4%BB%A4%E8%A1%8C"><span class="toc-text">第二步: clap读取命令行</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Args%E7%BB%93%E6%9E%84%E4%BD%93"><span class="toc-text">Args结构体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Commands%E7%BB%93%E6%9E%84%E4%BD%93"><span class="toc-text">Commands结构体</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5-%E4%BB%8Evite%E8%84%9A%E6%89%8B%E6%9E%B6%E4%B8%AD%E5%A4%8D%E5%88%B6%E9%A1%B9%E7%9B%AE%E6%A8%A1%E6%9D%BF"><span class="toc-text">第三步: 从vite脚手架中复制项目模板</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8vite%E8%84%9A%E6%89%8B%E6%9E%B6%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="toc-text">使用vite脚手架创建项目</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5-%E7%BC%96%E5%86%99%E9%9C%80%E8%A6%81%E7%94%A8%E5%88%B0%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">第四步: 编写需要用到的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BB%E5%8F%96%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%BE%93%E5%85%A5%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">读取命令行输入的方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E5%88%B0%E6%8C%87%E5%AE%9A%E7%9B%AE%E5%BD%95%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">复制文件到指定目录的方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E8%BF%90%E8%A1%8C%E6%97%B6%E7%9B%AE%E5%BD%95%E4%BD%8D%E7%BD%AE%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">获取运行时目录位置的方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E6%AD%A5-%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E7%9A%84%E9%80%BB%E8%BE%91"><span class="toc-text">第五步: 创建项目的逻辑</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%9D%E5%AD%98%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5%E7%9A%84%E7%BB%93%E6%9E%84%E4%BD%93"><span class="toc-text">保存用户输入的结构体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E7%BB%93%E6%9E%84%E4%BD%93%E6%B7%BB%E5%8A%A0%E6%96%B9%E6%B3%95"><span class="toc-text">为结构体添加方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%A2%E9%97%AE%E5%B9%B6%E6%8E%A5%E6%94%B6%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5"><span class="toc-text">询问并接收用户输入</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E6%AD%A5-%E6%B5%8B%E8%AF%95"><span class="toc-text">第六步: 测试</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9main-rs"><span class="toc-text">修改main.rs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95cargo-run"><span class="toc-text">测试cargo run</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95cargo-build%E5%90%8E%E7%9A%84exe"><span class="toc-text">测试cargo build后的exe</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#end"><span class="toc-text">end</span></a></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a><a class="buttom" onclick="util.scrollComment()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M10.46 1.25h3.08c1.603 0 2.86 0 3.864.095c1.023.098 1.861.3 2.6.752a5.75 5.75 0 0 1 1.899 1.899c.452.738.654 1.577.752 2.6c.095 1.004.095 2.261.095 3.865v1.067c0 1.141 0 2.036-.05 2.759c-.05.735-.153 1.347-.388 1.913a5.75 5.75 0 0 1-3.112 3.112c-.805.334-1.721.408-2.977.43a10.81 10.81 0 0 0-.929.036c-.198.022-.275.054-.32.08c-.047.028-.112.078-.224.232c-.121.166-.258.396-.476.764l-.542.916c-.773 1.307-2.69 1.307-3.464 0l-.542-.916a10.605 10.605 0 0 0-.476-.764c-.112-.154-.177-.204-.224-.232c-.045-.026-.122-.058-.32-.08c-.212-.023-.49-.03-.93-.037c-1.255-.021-2.171-.095-2.976-.429A5.75 5.75 0 0 1 1.688 16.2c-.235-.566-.338-1.178-.389-1.913c-.049-.723-.049-1.618-.049-2.76v-1.066c0-1.604 0-2.86.095-3.865c.098-1.023.3-1.862.752-2.6a5.75 5.75 0 0 1 1.899-1.899c.738-.452 1.577-.654 2.6-.752C7.6 1.25 8.857 1.25 10.461 1.25M6.739 2.839c-.914.087-1.495.253-1.959.537A4.25 4.25 0 0 0 3.376 4.78c-.284.464-.45 1.045-.537 1.96c-.088.924-.089 2.11-.089 3.761v1c0 1.175 0 2.019.046 2.685c.045.659.131 1.089.278 1.441a4.25 4.25 0 0 0 2.3 2.3c.515.214 1.173.294 2.429.316h.031c.398.007.747.013 1.037.045c.311.035.616.104.909.274c.29.17.5.395.682.645c.169.232.342.525.538.856l.559.944a.52.52 0 0 0 .882 0l.559-.944c.196-.331.37-.624.538-.856c.182-.25.392-.476.682-.645c.293-.17.598-.24.909-.274c.29-.032.639-.038 1.037-.045h.032c1.255-.022 1.913-.102 2.428-.316a4.25 4.25 0 0 0 2.3-2.3c.147-.352.233-.782.278-1.441c.046-.666.046-1.51.046-2.685v-1c0-1.651 0-2.837-.089-3.762c-.087-.914-.253-1.495-.537-1.959a4.25 4.25 0 0 0-1.403-1.403c-.464-.284-1.045-.45-1.96-.537c-.924-.088-2.11-.089-3.761-.089h-3c-1.651 0-2.837 0-3.762.089" clip-rule="evenodd"/><path fill="currentColor" d="M9 11a1 1 0 1 1-2 0a1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0a1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><span>参与讨论</span></a></div></widget>
+</div></aside><div class='float-panel blur'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+<script type="text/javascript">
+  const ctx = {
+    date_suffix: {
+      just: `刚刚`,
+      min: `分钟前`,
+      hour: `小时前`,
+      day: `天前`,
+    },
+    root : `/`,
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"codeblock":true,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+  };
+  const deps = {
+    jquery: `https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js`,
+    marked: `https://cdn.jsdelivr.net/npm/marked@13.0.1/lib/marked.umd.min.js`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+    
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      let retryTimes = 3;
+      utils.onLoading(el);
+      function req() {
+        return new Promise((resolve, reject) => {
+          let status = 0; // 0 等待 1 完成 2 超时
+          let timer = setTimeout(() => {
+            if (status === 0) {
+              status = 2;
+              timer = null;
+              reject('请求超时');
+              if (retryTimes == 0) {
+                onFailure();
+              }
+            }
+          }, 5000);
+          fetch(url).then(function(response) {
+            if (status !== 2) {
+              clearTimeout(timer);
+              resolve(response);
+              timer = null;
+              status = 1;
+            }
+            if (response.ok) {
+              return response.json();
+            }
+            throw new Error('Network response was not ok.');
+          }).then(function(data) {
+            retryTimes = 0;
+            utils.onLoadSuccess(el);
+            callback(data);
+          }).catch(function(error) {
+            if (retryTimes > 0) {
+              retryTimes -= 1;
+              setTimeout(() => {
+                req();
+              }, 5000);
+            } else {
+              utils.onLoadFailure(el);
+              onFailure();
+            }
+          });
+        });
+      }
+      req();
+    },
+  };
+</script>
+
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+<script type="text/javascript">
+  (() => {
+    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+    for (const tagSwitcher of tagSwitchers) {
+      tagSwitcher.addEventListener('click', (e) => {
+        const parent = e.target.closest('.tag-subtree.parent-tag')
+        parent.classList.toggle('expanded')
+        e.preventDefault()
+      })
+    }
+
+    // Get active tag from query string, then activate it.
+    const urlParams = new URLSearchParams(window.location.search)
+    const activeTag = urlParams.get('tag')
+    if (activeTag) {
+      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
+      if (tag) {
+        tag.querySelector('a').classList.add('active')
+        
+        while (tag) {
+          tag.classList.add('expanded')
+          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
+        }
+      }
+    }
+  })()
+</script>
+
+
+<!-- required -->
+<script src="/js/main.js?v=1.29.1" defer></script>
+
+<script type="text/javascript">
+  const applyTheme = (theme) => {
+    if (theme === 'auto') {
+      document.documentElement.removeAttribute('data-theme')
+    } else {
+      document.documentElement.setAttribute('data-theme', theme)
+    }
+
+    applyThemeToGiscus(theme)
+  }
+
+  const applyThemeToGiscus = (theme) => {
+    theme = theme === 'auto' ? 'preferred_color_scheme' : theme
+
+    const cmt = document.getElementById('giscus')
+    if (cmt) {
+      // This works before giscus load.
+      cmt.setAttribute('data-theme', theme)
+    }
+
+    const iframe = document.querySelector('#comments > section.giscus > iframe')
+    if (iframe) {
+      // This works after giscus loaded.
+      const src = iframe.src
+      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
+      iframe.src = newSrc
+    }
+  }
+
+  const switchTheme = () => {
+    // light -> dark -> auto -> light -> ...
+    const currentTheme = document.documentElement.getAttribute('data-theme')
+    let newTheme;
+    switch (currentTheme) {
+      case 'light':
+        newTheme = 'dark'
+        break
+      case 'dark':
+        newTheme = 'auto'
+        break
+      default:
+        newTheme = 'light'
+    }
+    applyTheme(newTheme)
+    window.localStorage.setItem('Stellar.theme', newTheme)
+
+    const messages = {
+      light: `切换到浅色模式`,
+      dark: `切换到深色模式`,
+      auto: `切换到跟随系统配色`,
+    }
+    hud?.toast?.(messages[newTheme])
+  }
+
+  (() => {
+    // Apply user's preferred theme, if any.
+    const theme = window.localStorage.getItem('Stellar.theme')
+    if (theme !== null) {
+      applyTheme(theme)
+    }
+  })()
+</script>
+
+
+<!-- optional -->
+
+  <script type="module">
+  const el = document.querySelector('#comments #giscus');
+  util.viewportLazyload(el, load_discus, true);
+
+  function load_discus() {
+    if (!el) return;
+    try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.error(error);
+      }
+      const script = document.createElement('script');
+      script.async = true;
+      for (const key of Object.keys(el.attributes)) {
+        const attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
+  }
+</script>
+
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/flying-pages@2/flying-pages.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+</script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css`,
+    js: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js`
+  };
+  var selector = '[data-fancybox]:not(.error)';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const els = document.getElementsByClassName('ds-memos');
+    if (els != undefined && els.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || slide.triggerEl.dataset.caption || null
+        }
+      });
+    })
+  }
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          rewind: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+    processEscapes: true
+  }
+});
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  }
+});
+MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for(i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script>
+<script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/mermaid@v9/dist/mermaid.min.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    var mermaid_config = {
+      startOnLoad: true,
+      theme:
+        "" == "auto" &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "neutral",
+      logLevel: 3,
+      themeVariables: {
+        darkMode: true
+      },
+      flowchart: {
+        useMaxWidth: false,
+        htmlLabels: true,
+        curve: "linear"
+      },
+      gantt: {
+        axisFormat: "%Y/%m/%d"
+      },
+      sequence: {
+        actorMargin: 50
+      }
+    }
+    mermaid.initialize(mermaid_config);
+  });
+</script><script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1267519437013349" crossorigin="anonymous"></script>
+</div></body></html>
