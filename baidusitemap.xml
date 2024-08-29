@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://malcode-site.github.io/2024/08/25/nextjs/nextjs-beginner/zh-cn/</loc>
+    <lastmod>2024-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://malcode-site.github.io/2024/08/25/nextjs/nextjs-beginner/jp/</loc>
+    <lastmod>2024-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://malcode-site.github.io/2024/08/29/ai/what-is-AI/zh-cn/</loc>
+    <lastmod>2024-08-29</lastmod>
+  </url>
+  <url>
     <loc>https://malcode-site.github.io/2024/08/26/rust/rust-project-cli/en/</loc>
     <lastmod>2024-08-29</lastmod>
   </url>
@@ -18,10 +30,6 @@
   </url>
   <url>
     <loc>https://malcode-site.github.io/2024/08/25/nextjs/nextjs-beginner/en/</loc>
-    <lastmod>2024-08-26</lastmod>
-  </url>
-  <url>
-    <loc>https://malcode-site.github.io/2024/08/25/nextjs/nextjs-beginner/zh-cn/</loc>
     <lastmod>2024-08-26</lastmod>
   </url>
   <url>
