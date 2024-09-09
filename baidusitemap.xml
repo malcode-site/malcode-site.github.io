@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://malcode-site.github.io/2024/08/25/nextjs/nextjs-beginner/zh-cn/</loc>
-    <lastmod>2024-08-29</lastmod>
+    <loc>https://malcode-site.github.io/2024/09/09/nextjs/nextjs-beginner-tiptap/en/</loc>
+    <lastmod>2024-09-09</lastmod>
   </url>
   <url>
-    <loc>https://malcode-site.github.io/2024/08/25/nextjs/nextjs-beginner/jp/</loc>
-    <lastmod>2024-08-29</lastmod>
+    <loc>https://malcode-site.github.io/2024/09/09/nextjs/nextjs-beginner-tiptap/zh-cn/</loc>
+    <lastmod>2024-09-09</lastmod>
   </url>
   <url>
     <loc>https://malcode-site.github.io/2024/08/29/ai/what-is-AI/zh-cn/</loc>
-    <lastmod>2024-08-29</lastmod>
+    <lastmod>2024-09-09</lastmod>
+  </url>
+  <url>
+    <loc>https://malcode-site.github.io/2024/08/25/nextjs/nextjs-beginner/zh-cn/</loc>
+    <lastmod>2024-09-09</lastmod>
+  </url>
+  <url>
+    <loc>https://malcode-site.github.io/2024/08/25/nextjs/nextjs-beginner/jp/</loc>
+    <lastmod>2024-09-09</lastmod>
+  </url>
+  <url>
+    <loc>https://malcode-site.github.io/2024/08/25/nextjs/nextjs-beginner/en/</loc>
+    <lastmod>2024-09-09</lastmod>
+  </url>
+  <url>
+    <loc>https://malcode-site.github.io/2024/08/24/%E6%B5%8B%E8%AF%95/byd/</loc>
+    <lastmod>2024-08-30</lastmod>
   </url>
   <url>
     <loc>https://malcode-site.github.io/2024/08/26/rust/rust-project-cli/en/</loc>
@@ -29,19 +45,11 @@
     <lastmod>2024-08-27</lastmod>
   </url>
   <url>
-    <loc>https://malcode-site.github.io/2024/08/25/nextjs/nextjs-beginner/en/</loc>
-    <lastmod>2024-08-26</lastmod>
-  </url>
-  <url>
     <loc>https://malcode-site.github.io/2024/08/25/seo/how-to-SEO/en/</loc>
     <lastmod>2024-08-25</lastmod>
   </url>
   <url>
     <loc>https://malcode-site.github.io/2024/08/25/seo/how-to-SEO/zh-cn/</loc>
     <lastmod>2024-08-25</lastmod>
-  </url>
-  <url>
-    <loc>https://malcode-site.github.io/2024/08/24/%E6%B5%8B%E8%AF%95/byd/</loc>
-    <lastmod>2024-08-24</lastmod>
   </url>
 </urlset> 
