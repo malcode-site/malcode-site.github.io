@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://malcode-site.github.io/2025/06/07/frontend/spa/packager/vite/develop-your-components-vite-tailwindcss/jp/</loc>
+    <lastmod>2025-06-07</lastmod>
+  </url>
+  <url>
+    <loc>https://malcode-site.github.io/2025/06/07/frontend/spa/packager/vite/develop-your-components-vite-tailwindcss/en/</loc>
+    <lastmod>2025-06-07</lastmod>
+  </url>
+  <url>
+    <loc>https://malcode-site.github.io/2025/06/07/frontend/spa/packager/vite/develop-your-components-vite-tailwindcss/zh-cn/</loc>
+    <lastmod>2025-06-07</lastmod>
+  </url>
+  <url>
+    <loc>https://malcode-site.github.io/2024/12/12/frontend/ssr/nextjs/nextjs-tiptap-blog-app/zh-cn/</loc>
+    <lastmod>2025-06-07</lastmod>
+  </url>
+  <url>
+    <loc>https://malcode-site.github.io/2025/01/07/ai/langchain-course/zh-cn/</loc>
+    <lastmod>2025-06-07</lastmod>
+  </url>
+  <url>
+    <loc>https://malcode-site.github.io/2024/12/12/ai/langchain-rag/zh-cn/</loc>
+    <lastmod>2025-06-07</lastmod>
+  </url>
+  <url>
     <loc>https://malcode-site.github.io/2025/06/02/backend/golang/go%E5%8C%85%E7%AE%A1%E7%90%86/jp/</loc>
     <lastmod>2025-06-02</lastmod>
   </url>
@@ -39,18 +63,6 @@
   <url>
     <loc>https://malcode-site.github.io/2025/04/29/production/mal-langsite/zh-cn/</loc>
     <lastmod>2025-04-29</lastmod>
-  </url>
-  <url>
-    <loc>https://malcode-site.github.io/2025/01/07/ai/langchain-course/zh-cn/</loc>
-    <lastmod>2025-01-06</lastmod>
-  </url>
-  <url>
-    <loc>https://malcode-site.github.io/2024/12/12/ai/langchain-rag/zh-cn/</loc>
-    <lastmod>2025-01-06</lastmod>
-  </url>
-  <url>
-    <loc>https://malcode-site.github.io/2024/12/12/frontend/ssr/nextjs/nextjs-tiptap-blog-app/zh-cn/</loc>
-    <lastmod>2025-01-02</lastmod>
   </url>
   <url>
     <loc>https://malcode-site.github.io/2024/08/24/%E6%B5%8B%E8%AF%95/byd/</loc>
