@@ -2,6 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://malcode-site.github.io/2025/06/14/backend/golang/custom-your-go-quick-starter/jp/</loc>
+    
+    <lastmod>2025-06-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://malcode-site.github.io/2025/06/14/backend/golang/custom-your-go-quick-starter/en/</loc>
+    
+    <lastmod>2025-06-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://malcode-site.github.io/2025/06/13/%E6%B5%8B%E8%AF%95/templates/zh-cn/</loc>
+    
+    <lastmod>2025-06-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://malcode-site.github.io/2025/06/14/backend/golang/custom-your-go-quick-starter/zh-cn/</loc>
+    
+    <lastmod>2025-06-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://malcode-site.github.io/2025/06/14/backend/python/python-quick-learn/jp/</loc>
     
     <lastmod>2025-06-15</lastmod>
@@ -23,42 +59,6 @@
     <loc>https://malcode-site.github.io/2025/06/14/backend/python/python-quick-learn/zh-cn/</loc>
     
     <lastmod>2025-06-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://malcode-site.github.io/2025/06/13/%E6%B5%8B%E8%AF%95/templates/zh-cn/</loc>
-    
-    <lastmod>2025-06-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://malcode-site.github.io/2025/06/14/backend/golang/custom-your-go-quick-starter/zh-cn/</loc>
-    
-    <lastmod>2025-06-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://malcode-site.github.io/2025/06/14/backend/golang/custom-your-go-quick-starter/jp/</loc>
-    
-    <lastmod>2025-06-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://malcode-site.github.io/2025/06/14/backend/golang/custom-your-go-quick-starter/en/</loc>
-    
-    <lastmod>2025-06-14</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -409,7 +409,7 @@
 
   <url>
     <loc>https://malcode-site.github.io/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -417,126 +417,126 @@
   
   <url>
     <loc>https://malcode-site.github.io/tags/golang/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/tags/ai/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/tags/test/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/tags/langchain/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/tags/nextjs/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/tags/frontend/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/tags/ide/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/tags/SEO/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/tags/beginner/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/tags/rust/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/tags/tauri/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/tags/CLI/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/tags/command-app/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/tags/vite/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/tags/tailwindcss/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/tags/template/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/tags/java/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/tags/python/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -545,147 +545,147 @@
   
   <url>
     <loc>https://malcode-site.github.io/categories/golang/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/categories/ai/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/categories/test/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/categories/langchain/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/categories/nextjs/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/categories/ide/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/categories/langchain/ai/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/categories/nextjs/frontend/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/categories/frontend/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/categories/SEO/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/categories/rust/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/categories/frontend/nextjs/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/categories/SEO/beginner/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/categories/rust/tauri/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/categories/rust/CLI/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/categories/rust/CLI/command-app/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/categories/vite/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/categories/vite/tailwindcss/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/categories/template/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/categories/java/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://malcode-site.github.io/categories/python/</loc>
-    <lastmod>2025-06-15</lastmod>
+    <lastmod>2025-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
