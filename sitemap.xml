@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://malcode-site.github.io/2025/06/16/frontend/spa/vue/en/</loc>
+    <loc>https://malcode-site.github.io/2025/06/17/frontend/spa/vue/vue-starter-template/en/</loc>
     
     <lastmod>2025-06-17</lastmod>
     
@@ -11,7 +11,25 @@
   </url>
   
   <url>
-    <loc>https://malcode-site.github.io/2025/06/16/frontend/spa/vue/jp/</loc>
+    <loc>https://malcode-site.github.io/2025/06/17/frontend/spa/vue/vue-starter-template/zh-cn/</loc>
+    
+    <lastmod>2025-06-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://malcode-site.github.io/2025/06/16/frontend/spa/vue/vue-quick-learn/en/</loc>
+    
+    <lastmod>2025-06-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://malcode-site.github.io/2025/06/16/frontend/spa/vue/vue-quick-learn/jp/</loc>
     
     <lastmod>2025-06-16</lastmod>
     
@@ -20,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://malcode-site.github.io/2025/06/16/frontend/spa/vue/zh-cn/</loc>
+    <loc>https://malcode-site.github.io/2025/06/16/frontend/spa/vue/vue-quick-learn/zh-cn/</loc>
     
     <lastmod>2025-06-16</lastmod>
     
