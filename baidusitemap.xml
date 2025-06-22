@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://malcode-site.github.io/2025/06/22/backend/rust/rust-web-starter/en/</loc>
+    <lastmod>2025-06-22</lastmod>
+  </url>
+  <url>
+    <loc>https://malcode-site.github.io/2025/06/22/backend/rust/rust-web-starter/jp/</loc>
+    <lastmod>2025-06-22</lastmod>
+  </url>
+  <url>
+    <loc>https://malcode-site.github.io/2025/06/22/backend/rust/rust-web-starter/zh-cn/</loc>
+    <lastmod>2025-06-22</lastmod>
+  </url>
+  <url>
+    <loc>https://malcode-site.github.io/2025/06/22/frontend/spa/react/react-quick-learn/zh-cn/</loc>
+    <lastmod>2025-06-22</lastmod>
+  </url>
+  <url>
+    <loc>https://malcode-site.github.io/2025/06/22/frontend/spa/react/react-quick-learn/jp/</loc>
+    <lastmod>2025-06-22</lastmod>
+  </url>
+  <url>
+    <loc>https://malcode-site.github.io/2025/06/22/frontend/spa/react/react-quick-learn/en/</loc>
+    <lastmod>2025-06-22</lastmod>
+  </url>
+  <url>
+    <loc>https://malcode-site.github.io/2025/06/20/frontend/ssr/nextjs/nextjs-quick-start/zh-cn/</loc>
+    <lastmod>2025-06-20</lastmod>
+  </url>
+  <url>
+    <loc>https://malcode-site.github.io/2025/06/20/frontend/ssr/nextjs/nextjs-quick-start/jp/</loc>
+    <lastmod>2025-06-20</lastmod>
+  </url>
+  <url>
+    <loc>https://malcode-site.github.io/2025/06/20/frontend/ssr/nextjs/nextjs-quick-start/en/</loc>
+    <lastmod>2025-06-20</lastmod>
+  </url>
+  <url>
     <loc>https://malcode-site.github.io/2025/06/17/frontend/spa/vue/vue-starter-template/en/</loc>
     <lastmod>2025-06-17</lastmod>
   </url>
