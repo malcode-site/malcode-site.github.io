@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://malcode-site.github.io/2025/06/22/frontend/spa/react/react-quick-starter/en/</loc>
-    <lastmod>2025-06-23</lastmod>
+    <loc>https://malcode-site.github.io/2025/08/20/bug-fixs/perission-denied/jp/</loc>
+    <lastmod>2025-08-19</lastmod>
+  </url>
+  <url>
+    <loc>https://malcode-site.github.io/2025/08/20/bug-fixs/perission-denied/en/</loc>
+    <lastmod>2025-08-19</lastmod>
+  </url>
+  <url>
+    <loc>https://malcode-site.github.io/2025/08/20/bug-fixs/perission-denied/zh-cn/</loc>
+    <lastmod>2025-08-19</lastmod>
+  </url>
+  <url>
+    <loc>https://malcode-site.github.io/2025/06/16/ai/machine-learning/quick-learn/zh-cn/</loc>
+    <lastmod>2025-06-29</lastmod>
   </url>
   <url>
     <loc>https://malcode-site.github.io/2025/06/22/frontend/spa/react/react-quick-starter/jp/</loc>
@@ -10,6 +22,10 @@
   </url>
   <url>
     <loc>https://malcode-site.github.io/2025/06/22/frontend/spa/react/react-quick-starter/zh-cn/</loc>
+    <lastmod>2025-06-23</lastmod>
+  </url>
+  <url>
+    <loc>https://malcode-site.github.io/2025/06/22/frontend/spa/react/react-quick-starter/en/</loc>
     <lastmod>2025-06-23</lastmod>
   </url>
   <url>
@@ -54,10 +70,6 @@
   </url>
   <url>
     <loc>https://malcode-site.github.io/2025/06/16/frontend/spa/vue/vue-quick-learn/zh-cn/</loc>
-    <lastmod>2025-06-16</lastmod>
-  </url>
-  <url>
-    <loc>https://malcode-site.github.io/2025/06/16/ai/machine-learning/quick-learn/zh-cn/</loc>
     <lastmod>2025-06-16</lastmod>
   </url>
   <url>
