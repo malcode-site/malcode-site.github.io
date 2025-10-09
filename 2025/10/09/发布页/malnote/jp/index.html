@@ -1,0 +1,1001 @@
+
+<!DOCTYPE html><html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.30.0" theme-name="Stellar" theme-version="1.30.0">
+  
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  <meta name="theme-color" content="#f9fafb">
+  
+  <title>malnote リリースv1バージョンを発表 - MalCoder</title>
+
+  
+    <meta name="description" content="malnote リリースv1バージョンを発表">
+<meta property="og:type" content="article">
+<meta property="og:title" content="malnote リリースv1バージョンを発表">
+<meta property="og:url" content="https://malcode-site.github.io/2025/10/09/%E5%8F%91%E5%B8%83%E9%A1%B5/malnote/jp/index.html">
+<meta property="og:site_name" content="MalCoder">
+<meta property="og:description" content="malnote リリースv1バージョンを発表">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009105421.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009105510.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009105557.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009105750.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009105955.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009110009.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009110258.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009110331.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009110522.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009110844.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009110742.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009110953.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009111028.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009111037.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009115255.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009111838.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009115337.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009115416.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009111436.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009115500.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009115549.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009160154.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009160245.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009160309.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009145500.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009150148.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009150256.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009150324.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009150359.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009150447.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009150514.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009151138.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009150804.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009153840.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009151949.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009152528.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009152626.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009152913.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009152948.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009153644.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009154805.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009154833.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009155522.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009100429.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009155741.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009160420.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009160452.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009160502.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009160628.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009160712.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009160752.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009160815.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009161851.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009161919.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009161939.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009162254.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009162202.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009162342.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009162429.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009162509.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009162547.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009162814.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009162912.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009162941.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009163040.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009163120.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009163223.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009163624.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009163337.png">
+<meta property="article:published_time" content="2025-10-09T00:05:01.000Z">
+<meta property="article:modified_time" content="2025-10-09T08:45:27.593Z">
+<meta property="article:author" content="Malred">
+<meta property="article:tag" content="publish">
+<meta property="article:tag" content="product">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009105421.png">
+<meta name="twitter:creator" content="@david_clar59790">
+  
+  
+  
+  <meta name="keywords" content="publish,product">
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="MalCoder" type="application/atom+xml">
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.30.0">
+
+
+  
+    <link rel="shortcut icon" href="https://www.freeimg.cn/i/2024/08/22/66c6f7842729a.png">
+  
+
+  
+
+  
+</head>
+<body>
+
+<div class="l_body content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://www.freeimg.cn/i/2024/08/22/66c6f7842729a.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">MalCoder</div><div class="sub normal cap">stay hungry, stay foolish</div><div class="sub hover cap" style="opacity:0"> Program guidance for beginners</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+
+<nav class="menu dis-select"><a class="nav-item" title="Home" href="/" style="color:#1BCDFC"><span>Home</span></a><a class="nav-item" title="about" href="/about/"><span>about</span></a><a class="nav-item" title="Portfolio" href="/show/"><span>Portfolio</span></a></nav>
+</div>
+<div class="widgets">
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">专栏：publish</span></div><div class="widget-body"><a class="item active" href="/2025/10/09/%E5%8F%91%E5%B8%83%E9%A1%B5/malnote/jp/"><span class="title">malnote リリースv1バージョンを発表</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a><a class="item" href="/2025/10/09/%E5%8F%91%E5%B8%83%E9%A1%B5/malnote/zh-cn/"><span class="title">malnote发布release-v1版本</span></a><a class="item" href="/2025/10/09/%E5%8F%91%E5%B8%83%E9%A1%B5/malnote/en/"><span class="title">malnote Releases Version v1</span></a></div></widget>
+
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="atom.xml"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19q0-.825.588-1.412T5 17q.825 0 1.413.588T7 19q0 .825-.587 1.413T5 21m13.5 0q-.65 0-1.088-.475T16.9 19.4q-.275-2.425-1.312-4.537T12.9 11.1q-1.65-1.65-3.762-2.687T4.6 7.1q-.65-.075-1.125-.512T3 5.5q0-.65.45-1.062t1.075-.363q3.075.275 5.763 1.563t4.737 3.337q2.05 2.05 3.338 4.738t1.562 5.762q.05.625-.363 1.075T18.5 21m-6 0q-.625 0-1.075-.437T10.85 19.5q-.225-1.225-.787-2.262T8.65 15.35q-.85-.85-1.888-1.412T4.5 13.15q-.625-.125-1.062-.575T3 11.5q0-.65.45-1.075t1.075-.325q1.825.25 3.413 1.063t2.837 2.062q1.25 1.25 2.063 2.838t1.062 3.412q.1.625-.325 1.075T12.5 21"/></svg></a></div><div class="widget-body fs14"><a class="item title" href="/2025/10/09/%E5%8F%91%E5%B8%83%E9%A1%B5/malnote/en/"><span class="title">malnote Releases Version v1</span></a><a class="item title" href="/2025/10/09/%E5%8F%91%E5%B8%83%E9%A1%B5/malnote/jp/"><span class="title">malnote リリースv1バージョンを発表</span></a><a class="item title" href="/2025/10/09/%E5%8F%91%E5%B8%83%E9%A1%B5/malnote/zh-cn/"><span class="title">malnote发布release-v1版本</span></a><a class="item title" href="/2025/06/17/frontend/spa/vue/vue-starter-template/jp/"><span class="title">Vue3プロジェクト開発テンプレートの構築</span></a><a class="item title" href="/2025/08/20/bug-fixs/perission-denied/jp/"><span class="title">listen EACCES permission denied ::1:1420 問題の解決</span></a></div></widget>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/malred" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://www.svgrepo.com/show/512317/github-142.svg"/></a><a class="social" href="https://space.bilibili.com/1771962643" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://www.svgrepo.com/show/520494/video-course.svg"/></a></div></footer>
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" id="menu" href="/topic">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/2025/10/09/%E5%8F%91%E5%B8%83%E9%A1%B5/malnote/jp/">publish</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2025-10-09T00:05:01.000Z">2025-10-09</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-10-09T08:45:27.593Z">2025-10-09</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>malnote リリースv1バージョンを発表</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><h1 id="ご紹介"><a href="#ご紹介" class="headerlink" title="ご紹介"></a>ご紹介</h1><p>malnoteは当初私が個人的にメモを取るために始めたプロジェクトでしたが、徐々に新機能を追加していくうちに、ついに皆様に使っていただけるバージョンを公開することにしました。</p>
+<p>私は最初からたくさんのメモソフトを試してきました：</p>
+<ul>
+<li><strong>语雀（Yǔquè）</strong>:非常に優れたソフトウェアで、本ソフトのデザインも语雀を参考にしています。</li>
+<li><strong>typora</strong>:1万字を超えるとレンダリングが遅くなり、カクつきます。</li>
+<li><strong>hexo</strong>:<br>语雀もいいですが、データは主にクラウド上にあり、私はローカル環境での運用を好みます。これは長らく使ってきましたが、hexo自体が大きくて、メモ内容を確認するためにはサービスを起動するか別の方法が必要でした。結局、hexoを使う意味がないと感じました。</li>
+</ul>
+<p>その後、nextjsを勉強している際に偶然tiptapエディターに出会い、最初のバージョンのmalnoteを作成しました。当時はnextjsプロジェクトだったのでexeパックができず、毎回起動させる必要がありました。新規PCにnodejsが入っていない場合はどうすればよいかという問題もありました。そこで、tuari版のmalnoteを開発し、ローカライズ機能を継続的に改善しました。文書はローカルに保存し、ローカライズできない機能（例：ファイルアップロード）にはgoでAPIバックエントを作りました。</p>
+<p>このメモソフトは完全無料で使えます。私をサポートしたい場合は、ウェブページの広告をクリックしてください。それによって0.01ドルの収入を得ることができますが（ただし、たとえ収入があったとしても、中国国内では換金できないようです）。</p>
+<p>ダウンロード先：<br><a target="_blank" rel="noopener" href="https://github.com/malred/malnote/releases/tag/v1">malnote-v1</a></p>
+<h1 id="基本機能"><a href="#基本機能" class="headerlink" title="基本機能"></a>基本機能</h1><p>tauri-sqlプラグインの問題により、定義したマイグレーションスクリプトが自動実行されないため、以下のdbファイルをダウンロードしていただき、<br><code>C:\Users\[あなたのユーザー名]\AppData\Roaming\org.malred.malnote</code>にコピーしてください。<br><a target="_blank" rel="noopener" href="https://github.com/malcode-site/malsite-imgs/blob/main/malnote.db">malnote.db</a></p>
+<p>このメモソフトのバックエントAPIをダウンロードできます：<br><a target="_blank" rel="noopener" href="https://github.com/malred/malnote/blob/main/malnote-api.exe">malnote-api.exe</a></p>
+<h2 id="ホーム画面"><a href="#ホーム画面" class="headerlink" title="ホーム画面"></a>ホーム画面</h2><p>新しい知識ベースと文書の作成：<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009105421.png" alt="画像1"><br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009105510.png" alt="画像2"><br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009105557.png" alt="画像3"></p>
+<h2 id="ヘッドレスリッチテキストエディター-tiptap統合"><a href="#ヘッドレスリッチテキストエディター-tiptap統合" class="headerlink" title="ヘッドレスリッチテキストエディター tiptap統合"></a>ヘッドレスリッチテキストエディター tiptap統合</h2><p>一部のmarkdown構文による編集をサポートしています（これはtiptap自体の問題かもしれません）。様々なスタイルにも対応しています。</p>
+<h3 id="メモのレンダリング"><a href="#メモのレンダリング" class="headerlink" title="メモのレンダリング"></a>メモのレンダリング</h3><h4 id="ページ構造"><a href="#ページ構造" class="headerlink" title="ページ構造"></a>ページ構造</h4><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009105750.png" alt="画像"></p>
+<h4 id="アウトライン（タイトルに基づいて生成）"><a href="#アウトライン（タイトルに基づいて生成）" class="headerlink" title="アウトライン（タイトルに基づいて生成）"></a>アウトライン（タイトルに基づいて生成）</h4><p>右上にある短い3本線のボタンをクリックすると、アウトラインを開けます。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009105955.png" alt="画像"></p>
+<h4 id="AI質問（文書コンテンツに基づく）"><a href="#AI質問（文書コンテンツに基づく）" class="headerlink" title="AI質問（文書コンテンツに基づく）"></a>AI質問（文書コンテンツに基づく）</h4><p>トップバーのロボットアイコンをクリックすると、AI質問エリアを開けます。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009110009.png" alt="画像"></p>
+<h3 id="基本的なメモ編集"><a href="#基本的なメモ編集" class="headerlink" title="基本的なメモ編集"></a>基本的なメモ編集</h3><p>メモを編集する際、画像をコピーして貼り付けることができ、自動的にサーバーにアップロードされ、画像が表示されます。（ただし、ファイルマネージャー内でコピーしたものは貼り付けられません）</p>
+<p>ウェブページの内容をコピーしてエディターに貼り付けることもできます。一部のスタイルが保持されます。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009110258.png" alt="画像"></p>
+<h4 id="bar"><a href="#bar" class="headerlink" title="bar"></a>bar</h4><p>テキストを選択すると、bubbleツールバーが表示されます。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009110331.png" alt="画像"></p>
+<p>カーソルを空白行に移動すると、floatツールバーが表示されます。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009110522.png" alt="画像"></p>
+<h4 id="ショートカット"><a href="#ショートカット" class="headerlink" title="ショートカット"></a>ショートカット</h4><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009110844.png" alt="画像"></p>
+<h4 id="コードブロック"><a href="#コードブロック" class="headerlink" title="コードブロック"></a>コードブロック</h4><p>highlight.jsが統合されているため、コードブロックがハイライト表示されます。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009110742.png" alt="画像"></p>
+<h4 id="mermaid"><a href="#mermaid" class="headerlink" title="mermaid"></a>mermaid</h4><p>トップバーのこのアイコンをクリックすると、mermaidブロックが挿入されます。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009110953.png" alt="画像"><br>効果：<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009111028.png" alt="画像"><br>編集可能：<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009111037.png" alt="画像"></p>
+<h4 id="latex数式"><a href="#latex数式" class="headerlink" title="latex数式"></a>latex数式</h4><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009115255.png" alt="画像"><br>効果：<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009111838.png" alt="画像"></p>
+<h4 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h4><p>ショートカット <code>ctrl-alt-f</code> で脚注を追加できます。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009115337.png" alt="画像"><br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009115416.png" alt="画像"></p>
+<h4 id="テーブル"><a href="#テーブル" class="headerlink" title="テーブル"></a>テーブル</h4><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009111436.png" alt="画像"></p>
+<h4 id="その他"><a href="#その他" class="headerlink" title="その他"></a>その他</h4><p>ハイライト、フォント、画像などの基本機能はここでは紹介しません。</p>
+<h3 id="タグ"><a href="#タグ" class="headerlink" title="タグ"></a>タグ</h3><p>メモにタグを割り当てることができ、アーカイブページでタグ別にグループ化して見ることができます。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009115500.png" alt="画像"><br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009115549.png" alt="画像"></p>
+<h3 id="履歴記録"><a href="#履歴記録" class="headerlink" title="履歴記録"></a>履歴記録</h3><p>編集ページの「保存」ボタンをクリックすると、現在の内容が履歴記録に同期保存されます。右上のボタンをクリックして履歴記録ページに入ると、記録を復元できます。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009160154.png" alt="画像"><br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009160245.png" alt="画像"><br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009160309.png" alt="画像"></p>
+<h3 id="共同編集"><a href="#共同編集" class="headerlink" title="共同編集"></a>共同編集</h3><p>トップバーの小人+アイコンをクリックすると、共同編集に入ることができます（ただし、バグがあり、メモ内容に<strong>テーブル</strong><br>がある場合は使用できません）。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">共同編集同期クライアントを開始する</span></span><br><span class="line">npx @hocuspocus/cli@2.5 --port 1234 --sqlite</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009145500.png" alt="画像"></p>
+<h3 id="サイドバー目次"><a href="#サイドバー目次" class="headerlink" title="サイドバー目次"></a>サイドバー目次</h3><p>サイドバーには現在の知識ベースのメモ目次が表示され、メモの下にサブセットメモを新規作成したり、名前を変更したり、削除したりできます。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009150148.png" alt="画像"><br>プラスボタンをクリックすると、新しいメモを作成できます。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009150256.png" alt="画像"><br>検索ボックスをクリックすると、メモを検索できます。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009150324.png" alt="画像"></p>
+<h2 id="ツールボックス"><a href="#ツールボックス" class="headerlink" title="ツールボックス"></a>ツールボックス</h2><p>様々な便利なツールを提供します。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009150359.png" alt="画像"></p>
+<h3 id="スケジュール管理"><a href="#スケジュール管理" class="headerlink" title="スケジュール管理"></a>スケジュール管理</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009150447.png" alt="画像"><br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009150514.png" alt="画像"></p>
+<h3 id="AIチャット"><a href="#AIチャット" class="headerlink" title="AIチャット"></a>AIチャット</h3><p>基本的なAIチャットページを実装しており、無料でglm-4-flash、glm-4.5-flash、glm-z1-flashを使用できます（智譜大モデルに感謝！）。他のモデルを使用したい場合は、カスタム設定を利用できます（groqやcerebrasが利用可能で、無料APIを提供しています）。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009151138.png" alt="画像"></p>
+<h4 id="カスタムAPI設定"><a href="#カスタムAPI設定" class="headerlink" title="カスタムAPI設定"></a>カスタムAPI設定</h4><p>カスタムAPI設定をサポートしています。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009150804.png" alt="画像"><br>ollamaをサポートしています。BASE<br>BATHにollamaを記入すると、自動的にローカルの11434ポートのollamaインターフェイスにアクセスしますが、ollamaをインストールする必要があります。また、環境変数<br><code>OLLAMA_HOST=0.0.0.0:11434</code> を設定してリッスンするネットワークポートとバインドされるIPアドレスを指定し、<br><code>OLLAMA_ORIGINS=*</code> を設定してクロスドメインを許可する必要があります。</p>
+<h4 id="チャット履歴"><a href="#チャット履歴" class="headerlink" title="チャット履歴"></a>チャット履歴</h4><p>青いフォルダーボタンをクリックすると、過去のAIチャット履歴を表示できます。履歴をクリックするとロードでき、トップの「履歴をクリア」をクリックすると、現在のすべての履歴記録を削除できます。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009153840.png" alt="画像"></p>
+<h4 id="添付文書"><a href="#添付文書" class="headerlink" title="添付文書"></a>添付文書</h4><p>.md&#x2F;.txt&#x2F;.jsonファイルの上伝に対応しており、チャット時にAIに付随させられます。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009151949.png" alt="画像"><br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009152528.png" alt="画像"><br>注：文書がアップロードされたタグをクリックすると、内容を確認できます。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009152626.png" alt="画像"></p>
+<h4 id="画像アップロード"><a href="#画像アップロード" class="headerlink" title="画像アップロード"></a>画像アップロード</h4><p>画像を選択してアップロードでき、アップロード完了後に自動的にAIインターフェイスにリクエストして画像認識を行い、ユーザーがメッセージを送信する際に画像認識の内容を付随させます。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009152913.png" alt="画像"><br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009152948.png" alt="画像"><br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009153644.png" alt="画像"></p>
+<h4 id="ベクトル化文書"><a href="#ベクトル化文書" class="headerlink" title="ベクトル化文書"></a>ベクトル化文書</h4><p>メモをベクトル化することをサポートしています（ベクトル化にはローカルollamaが必要です）。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ollama pull mxbai-embed-large</span><br></pre></td></tr></table></figure>
+
+<p>AIに質問する際に文書を選択すると、既存のローカルベクトルがあれば直接使用でき、再処理は不要です。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009154805.png" alt="画像"><br>確認を選択すると、ローカルollamaでベクトル化処理が行われます。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009154833.png" alt="画像"><br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009155522.png" alt="画像"></p>
+<h4 id="Wiki検索"><a href="#Wiki検索" class="headerlink" title="Wiki検索"></a>Wiki検索</h4><p>Wiki検索をサポートしています。ネットワークに問題がある場合は、ローカルWiki（kiwix）も使用できます。ローカルサービス（ポート9000）を起動するだけで、本ソフトは遠隔リクエストが失敗した場合にローカルサービスを使用します。<br><a target="_blank" rel="noopener" href="https://github.com/malred/go-course">kiwixソフトウェアダウンロード</a><br><a target="_blank" rel="noopener" href="https://library.kiwix.org/">.zimファイルダウンロード</a><br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009100429.png" alt="画像"><br>入力ボックスに検索したい単語を入力し、丸いボタンをクリックするとWikiを検索し、検索結果をメッセージとして表示します。その後質問すると、コンテキストと一緒にAIに提出されます。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009155741.png" alt="画像"></p>
+<h3 id="マインドマップ"><a href="#マインドマップ" class="headerlink" title="マインドマップ"></a>マインドマップ</h3><p>実験的な機能で、Enterキーを押すと新しいノードを追加できます。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009160420.png" alt="画像"></p>
+<h3 id="タイムライン"><a href="#タイムライン" class="headerlink" title="タイムライン"></a>タイムライン</h3><p>タイムラインのレンダリングと編集をサポートし、画像としてエクスポートすることも可能です。JSON形式でエクスポートし、JSONをインポートしてタイムラインをレンダリングすることも可能です。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009160452.png" alt="画像"><br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009160502.png" alt="画像"></p>
+<h3 id="mermaidエディター"><a href="#mermaidエディター" class="headerlink" title="mermaidエディター"></a>mermaidエディター</h3><p>mermaidの編集とプレビューをサポートします。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009160628.png" alt="画像"></p>
+<h3 id="関係ネットワーク"><a href="#関係ネットワーク" class="headerlink" title="関係ネットワーク"></a>関係ネットワーク</h3><p>関係ノードの編集をサポートする実験的な機能ですが、まだ完成しておりません。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009160712.png" alt="画像"></p>
+<h3 id="OCR認識"><a href="#OCR認識" class="headerlink" title="OCR認識"></a>OCR認識</h3><p>AIを使って画像の内容を認識します。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009160752.png" alt="画像"></p>
+<h3 id="RAGツール"><a href="#RAGツール" class="headerlink" title="RAGツール"></a>RAGツール</h3><p>メモのベクトル化をサポートしています。以前のAIページで文書を選択した際に、すでにローカルにベクトルがあれば直接使用でき、再処理は不要です。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009160815.png" alt="画像"></p>
+<h3 id="MDエディター"><a href="#MDエディター" class="headerlink" title="MDエディター"></a>MDエディター</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009161851.png" alt="画像"></p>
+<h3 id="drawio"><a href="#drawio" class="headerlink" title="drawio"></a>drawio</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009161919.png" alt="画像"></p>
+<h3 id="excalidrawホワイトボード"><a href="#excalidrawホワイトボード" class="headerlink" title="excalidrawホワイトボード"></a>excalidrawホワイトボード</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009161939.png" alt="画像"></p>
+<h3 id="ウェブブラウジング"><a href="#ウェブブラウジング" class="headerlink" title="ウェブブラウジング"></a>ウェブブラウジング</h3><p>実験的な機能で、URLを入力するとURLの内容が表示され、非URLの場合はbing検索の内容が表示されます。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009162254.png" alt="画像"></p>
+<h3 id="正規表現式ツール"><a href="#正規表現式ツール" class="headerlink" title="正規表現式ツール"></a>正規表現式ツール</h3><p>正規表現式的テストをサポートします。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009162202.png" alt="画像"></p>
+<h3 id="APIテスト"><a href="#APIテスト" class="headerlink" title="APIテスト"></a>APIテスト</h3><p>実験的な機能です。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009162342.png" alt="画像"></p>
+<h3 id="画像エディター"><a href="#画像エディター" class="headerlink" title="画像エディター"></a>画像エディター</h3><p>画像の編集をサポートします。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009162429.png" alt="画像"></p>
+<h3 id="Base64ツール"><a href="#Base64ツール" class="headerlink" title="Base64ツール"></a>Base64ツール</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009162509.png" alt="画像"></p>
+<h3 id="Jupyterスタイルエディター（擬似）"><a href="#Jupyterスタイルエディター（擬似）" class="headerlink" title="Jupyterスタイルエディター（擬似）"></a>Jupyterスタイルエディター（擬似）</h3><p>ローカルにPythonがインストールされている必要があります。スタイルは似ていますが、ステップバイステップでの実行機能は実装されていません。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009162547.png" alt="画像"></p>
+<h3 id="LaTeXエディター"><a href="#LaTeXエディター" class="headerlink" title="LaTeXエディター"></a>LaTeXエディター</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009162814.png" alt="画像"></p>
+<h3 id="shell"><a href="#shell" class="headerlink" title="shell"></a>shell</h3><p>Pythonまたはjsコードの実行をサポートします。ローカルにPythonまたはnodejsがインストールされている必要があります。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009162912.png" alt="画像"></p>
+<h3 id="JSONエディター"><a href="#JSONエディター" class="headerlink" title="JSONエディター"></a>JSONエディター</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009162941.png" alt="画像"></p>
+<h2 id="小記"><a href="#小記" class="headerlink" title="小記"></a>小記</h2><p>小記の作成をサポートし、右側の項目をクリックすると修正できます。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009163040.png" alt="画像"></p>
+<h2 id="統計"><a href="#統計" class="headerlink" title="統計"></a>統計</h2><p>簡単なデータ統計を行います。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009163120.png" alt="画像"></p>
+<h2 id="アーカイブ"><a href="#アーカイブ" class="headerlink" title="アーカイブ"></a>アーカイブ</h2><p>タグ別に文書を分類します。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009163223.png" alt="画像"></p>
+<h2 id="チャット"><a href="#チャット" class="headerlink" title="チャット"></a>チャット</h2><h3 id="live2dモデル"><a href="#live2dモデル" class="headerlink" title="live2dモデル"></a>live2dモデル</h3><p>ローカルで表情パックとlive2dモデルを設定できます。APIバックエントと同じ階層に<code>public/Resources</code><br>ディレクトリを新規作成し、そのディレクトリ内にJSONファイルを作成して設定を宣言します。</p>
+<p>live2d設定例(&#x2F;Resources&#x2F;model-list.json)：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">[</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;value&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/Resources/a/b/modelX.model3.json&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;label&quot;</span><span class="punctuation">:</span> <span class="string">&quot;模型X&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
+
+<p>live2dがある場合、live2dが表示されます。ユーザーがテキストを送信すると、モデルのmotionアクションが再生されます。</p>
+<h3 id="表情パック"><a href="#表情パック" class="headerlink" title="表情パック"></a>表情パック</h3><p>表情パック設定例(&#x2F;Resources&#x2F;emoticons.json)：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">[</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;life1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;speak&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;path&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/Resources/emoticons/emoji/speak/speak.jpg&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;emotion&quot;</span><span class="punctuation">:</span> <span class="string">&quot;life&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;relax1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;懒&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;path&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/Resources/emoticons/懒.gif&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;emotion&quot;</span><span class="punctuation">:</span> <span class="string">&quot;relax&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
+
+<p>表情パックの情報はAIに送信され、AIも表情パックを使用します（現在デモで使っている表情パックはネットからのものです）。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009163624.png" alt="画像"></p>
+<h3 id="音声再生"><a href="#音声再生" class="headerlink" title="音声再生"></a>音声再生</h3><p>左側のこのボタンをクリックすると青色になり、AI生成が完了したら自動的に音声再生をリクエストします。右側のボタンで音声モデルを選択できます。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://raw.githubusercontent.com/malcode-site/malsite-imgs/main/20251009163337.png" alt="画像"><br>ローカルにindextts2サーバーが必要で、以下を使用できます：<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1jWpczKEG6">indexTTS2整合包</a></p>
+
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    
+    <section id="share">
+      <div class="header"><span>分享文章</span></div>
+      <div class="body">
+        <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://malcode-site.github.io/2025/10/09/%E5%8F%91%E5%B8%83%E9%A1%B5/malnote/jp/" /></div>
+        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot;)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg" /></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://malcode-site.github.io/2025/10/09/%E5%8F%91%E5%B8%83%E9%A1%B5/malnote/jp/&title=malnote リリースv1バージョンを発表 - MalCoder&summary=malnote リリースv1バージョンを発表"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg" /></a><a class="social share-item email" href="mailto:?subject=malnote リリースv1バージョンを発表 - MalCoder&amp;body=https://malcode-site.github.io/2025/10/09/%E5%8F%91%E5%B8%83%E9%A1%B5/malnote/jp/"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg" /></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg" /></a></div>
+        
+        <div class="qrcode" id="qrcode-wechat" style="opacity:0;height:0">
+          <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://malcode-site.github.io/2025/10/09/%E5%8F%91%E5%B8%83%E9%A1%B5/malnote/jp/"/>
+        </div>
+        
+      </div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2025/10/09/%E5%8F%91%E5%B8%83%E9%A1%B5/malnote/en/">malnote Releases Version v1</a></div></section></div>
+
+<div class="related-wrap" id="related-posts">
+    <section class='header'>
+      <div class='title cap theme'>您可能感兴趣的文章</div>
+    </section>
+    <section class='body'>
+    <div class="related-posts"><a class="item" href="\2025\10\09\发布页\malnote\en\" title="malnote Releases Version v1"><span class="title">malnote Releases Version v1</span><span class="excerpt">malnote releases version v1</span></a><a class="item" href="\2025\10\09\发布页\malnote\zh-cn\" title="malnote发布release-v1版本"><span class="title">malnote发布release-v1版本</span><span class="excerpt">malnote发布release-v1版本</span></a></div></section></div>
+
+
+  <div class="related-wrap md-text" id="comments">
+    <section class='header cmt-title cap theme'>
+      <p>快来参与讨论吧~</p>
+
+    </section>
+    <section class='body cmt-body giscus'>
+      
+
+<svg class="loading" style="vertical-align:middle;fill:currentColor;overflow:hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
+
+<div id="giscus" src="https://giscus.app/client.js" data-repo="malred/blog-comments" data-repo-id="R_kgDOMnkzJw" data-category="Announcements" data-category-id="DIC_kwDOMnkzJ84Ch4_O" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous"></div>
+
+    </section>
+  </div>
+
+
+
+<footer class="page-footer footnote"><hr><div class="text"><p><span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span></p>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E3%81%94%E7%B4%B9%E4%BB%8B"><span class="toc-text">ご紹介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A9%9F%E8%83%BD"><span class="toc-text">基本機能</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%83%9B%E3%83%BC%E3%83%A0%E7%94%BB%E9%9D%A2"><span class="toc-text">ホーム画面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%83%98%E3%83%83%E3%83%89%E3%83%AC%E3%82%B9%E3%83%AA%E3%83%83%E3%83%81%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF%E3%83%BC-tiptap%E7%B5%B1%E5%90%88"><span class="toc-text">ヘッドレスリッチテキストエディター tiptap統合</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%83%A1%E3%83%A2%E3%81%AE%E3%83%AC%E3%83%B3%E3%83%80%E3%83%AA%E3%83%B3%E3%82%B0"><span class="toc-text">メモのレンダリング</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%9A%E3%83%BC%E3%82%B8%E6%A7%8B%E9%80%A0"><span class="toc-text">ページ構造</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%82%A2%E3%82%A6%E3%83%88%E3%83%A9%E3%82%A4%E3%83%B3%EF%BC%88%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB%E3%81%AB%E5%9F%BA%E3%81%A5%E3%81%84%E3%81%A6%E7%94%9F%E6%88%90%EF%BC%89"><span class="toc-text">アウトライン（タイトルに基づいて生成）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#AI%E8%B3%AA%E5%95%8F%EF%BC%88%E6%96%87%E6%9B%B8%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%81%AB%E5%9F%BA%E3%81%A5%E3%81%8F%EF%BC%89"><span class="toc-text">AI質問（文書コンテンツに基づく）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%9A%84%E3%81%AA%E3%83%A1%E3%83%A2%E7%B7%A8%E9%9B%86"><span class="toc-text">基本的なメモ編集</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#bar"><span class="toc-text">bar</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88"><span class="toc-text">ショートカット</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%82%B3%E3%83%BC%E3%83%89%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF"><span class="toc-text">コードブロック</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mermaid"><span class="toc-text">mermaid</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#latex%E6%95%B0%E5%BC%8F"><span class="toc-text">latex数式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%84%9A%E6%B3%A8"><span class="toc-text">脚注</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB"><span class="toc-text">テーブル</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%81%9D%E3%81%AE%E4%BB%96"><span class="toc-text">その他</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%82%BF%E3%82%B0"><span class="toc-text">タグ</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%A5%E6%AD%B4%E8%A8%98%E9%8C%B2"><span class="toc-text">履歴記録</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B1%E5%90%8C%E7%B7%A8%E9%9B%86"><span class="toc-text">共同編集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%82%B5%E3%82%A4%E3%83%89%E3%83%90%E3%83%BC%E7%9B%AE%E6%AC%A1"><span class="toc-text">サイドバー目次</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%83%84%E3%83%BC%E3%83%AB%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9"><span class="toc-text">ツールボックス</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E7%AE%A1%E7%90%86"><span class="toc-text">スケジュール管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AI%E3%83%81%E3%83%A3%E3%83%83%E3%83%88"><span class="toc-text">AIチャット</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0API%E8%A8%AD%E5%AE%9A"><span class="toc-text">カスタムAPI設定</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E5%B1%A5%E6%AD%B4"><span class="toc-text">チャット履歴</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E4%BB%98%E6%96%87%E6%9B%B8"><span class="toc-text">添付文書</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%BB%E5%83%8F%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89"><span class="toc-text">画像アップロード</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E5%8C%96%E6%96%87%E6%9B%B8"><span class="toc-text">ベクトル化文書</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Wiki%E6%A4%9C%E7%B4%A2"><span class="toc-text">Wiki検索</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%83%9E%E3%82%A4%E3%83%B3%E3%83%89%E3%83%9E%E3%83%83%E3%83%97"><span class="toc-text">マインドマップ</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%A9%E3%82%A4%E3%83%B3"><span class="toc-text">タイムライン</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mermaid%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF%E3%83%BC"><span class="toc-text">mermaidエディター</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%96%A2%E4%BF%82%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF"><span class="toc-text">関係ネットワーク</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#OCR%E8%AA%8D%E8%AD%98"><span class="toc-text">OCR認識</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RAG%E3%83%84%E3%83%BC%E3%83%AB"><span class="toc-text">RAGツール</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MD%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF%E3%83%BC"><span class="toc-text">MDエディター</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#drawio"><span class="toc-text">drawio</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#excalidraw%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89"><span class="toc-text">excalidrawホワイトボード</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%82%A6%E3%82%A7%E3%83%96%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B8%E3%83%B3%E3%82%B0"><span class="toc-text">ウェブブラウジング</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E8%A6%8F%E8%A1%A8%E7%8F%BE%E5%BC%8F%E3%83%84%E3%83%BC%E3%83%AB"><span class="toc-text">正規表現式ツール</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#API%E3%83%86%E3%82%B9%E3%83%88"><span class="toc-text">APIテスト</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%BB%E5%83%8F%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF%E3%83%BC"><span class="toc-text">画像エディター</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Base64%E3%83%84%E3%83%BC%E3%83%AB"><span class="toc-text">Base64ツール</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jupyter%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF%E3%83%BC%EF%BC%88%E6%93%AC%E4%BC%BC%EF%BC%89"><span class="toc-text">Jupyterスタイルエディター（擬似）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LaTeX%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF%E3%83%BC"><span class="toc-text">LaTeXエディター</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#shell"><span class="toc-text">shell</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JSON%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF%E3%83%BC"><span class="toc-text">JSONエディター</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E8%A8%98"><span class="toc-text">小記</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B5%B1%E8%A8%88"><span class="toc-text">統計</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96"><span class="toc-text">アーカイブ</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%83%81%E3%83%A3%E3%83%83%E3%83%88"><span class="toc-text">チャット</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#live2d%E3%83%A2%E3%83%87%E3%83%AB"><span class="toc-text">live2dモデル</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E6%83%85%E3%83%91%E3%83%83%E3%82%AF"><span class="toc-text">表情パック</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9F%B3%E5%A3%B0%E5%86%8D%E7%94%9F"><span class="toc-text">音声再生</span></a></li></ol></li></ol></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a><a class="buttom" onclick="util.scrollComment()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M10.46 1.25h3.08c1.603 0 2.86 0 3.864.095c1.023.098 1.861.3 2.6.752a5.75 5.75 0 0 1 1.899 1.899c.452.738.654 1.577.752 2.6c.095 1.004.095 2.261.095 3.865v1.067c0 1.141 0 2.036-.05 2.759c-.05.735-.153 1.347-.388 1.913a5.75 5.75 0 0 1-3.112 3.112c-.805.334-1.721.408-2.977.43a10.81 10.81 0 0 0-.929.036c-.198.022-.275.054-.32.08c-.047.028-.112.078-.224.232c-.121.166-.258.396-.476.764l-.542.916c-.773 1.307-2.69 1.307-3.464 0l-.542-.916a10.605 10.605 0 0 0-.476-.764c-.112-.154-.177-.204-.224-.232c-.045-.026-.122-.058-.32-.08c-.212-.023-.49-.03-.93-.037c-1.255-.021-2.171-.095-2.976-.429A5.75 5.75 0 0 1 1.688 16.2c-.235-.566-.338-1.178-.389-1.913c-.049-.723-.049-1.618-.049-2.76v-1.066c0-1.604 0-2.86.095-3.865c.098-1.023.3-1.862.752-2.6a5.75 5.75 0 0 1 1.899-1.899c.738-.452 1.577-.654 2.6-.752C7.6 1.25 8.857 1.25 10.461 1.25M6.739 2.839c-.914.087-1.495.253-1.959.537A4.25 4.25 0 0 0 3.376 4.78c-.284.464-.45 1.045-.537 1.96c-.088.924-.089 2.11-.089 3.761v1c0 1.175 0 2.019.046 2.685c.045.659.131 1.089.278 1.441a4.25 4.25 0 0 0 2.3 2.3c.515.214 1.173.294 2.429.316h.031c.398.007.747.013 1.037.045c.311.035.616.104.909.274c.29.17.5.395.682.645c.169.232.342.525.538.856l.559.944a.52.52 0 0 0 .882 0l.559-.944c.196-.331.37-.624.538-.856c.182-.25.392-.476.682-.645c.293-.17.598-.24.909-.274c.29-.032.639-.038 1.037-.045h.032c1.255-.022 1.913-.102 2.428-.316a4.25 4.25 0 0 0 2.3-2.3c.147-.352.233-.782.278-1.441c.046-.666.046-1.51.046-2.685v-1c0-1.651 0-2.837-.089-3.762c-.087-.914-.253-1.495-.537-1.959a4.25 4.25 0 0 0-1.403-1.403c-.464-.284-1.045-.45-1.96-.537c-.924-.088-2.11-.089-3.761-.089h-3c-1.651 0-2.837 0-3.762.089" clip-rule="evenodd"/><path fill="currentColor" d="M9 11a1 1 0 1 1-2 0a1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0a1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><span>参与讨论</span></a></div></widget>
+</div></aside><div class='float-panel blur'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+<script type="text/javascript">
+  const ctx = {
+    date_suffix: {
+      just: `刚刚`,
+      min: `分钟前`,
+      hour: `小时前`,
+      day: `天前`,
+    },
+    root : `/`,
+    tag_plugins: {
+      chat: Object.assign({"api":"https://siteinfo.listentothewind.cn/api/v1"}),
+    }
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"skip_search":null,"codeblock":true,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+  };
+  const deps = {
+    jquery: `https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js`,
+    marked: `https://cdn.jsdelivr.net/npm/marked@13.0.1/lib/marked.umd.min.js`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  function RunItem() {
+    this.list = []; // 存放回调函数
+    this.start = () => {
+      for (var i = 0; i < this.list.length; i++) {
+        this.list[i].run();
+      }
+    };
+    this.push = (fn, name, setRequestAnimationFrame = true) => {
+      let myfn = fn
+      if (setRequestAnimationFrame) {
+        myfn = () => {
+          utils.requestAnimationFrame(fn)
+        }
+      }
+      var f = new Item(myfn, name);
+      this.list.push(f);
+    };
+    this.remove = (name) => {
+      for (let index = 0; index < this.list.length; index++) {
+        const e = this.list[index];
+        if (e.name == name) {
+          this.list.splice(index, 1);
+        }
+      }
+    }
+    // 构造一个可以run的对象
+    function Item(fn, name) {
+      // 函数名称
+      this.name = name || fn.name;
+      // run方法
+      this.run = () => {
+        try {
+          fn()
+        } catch (error) {
+          console.log(error);
+        }
+      };
+    }
+  }
+
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')) {
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function () {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      let retryTimes = 3;
+      utils.onLoading(el);
+      function req() {
+        return new Promise((resolve, reject) => {
+          let status = 0; // 0 等待 1 完成 2 超时
+          let timer = setTimeout(() => {
+            if (status === 0) {
+              status = 2;
+              timer = null;
+              reject('请求超时');
+              if (retryTimes == 0) {
+                onFailure();
+              }
+            }
+          }, 5000);
+          fetch(url).then(function (response) {
+            if (status !== 2) {
+              clearTimeout(timer);
+              resolve(response);
+              timer = null;
+              status = 1;
+            }
+            if (response.ok) {
+              return response.json();
+            }
+            throw new Error('Network response was not ok.');
+          }).then(function (data) {
+            retryTimes = 0;
+            utils.onLoadSuccess(el);
+            callback(data);
+          }).catch(function (error) {
+            if (retryTimes > 0) {
+              retryTimes -= 1;
+              setTimeout(() => {
+                req();
+              }, 5000);
+            } else {
+              utils.onLoadFailure(el);
+              onFailure();
+            }
+          });
+        });
+      }
+      req();
+    },
+    /********************** requestAnimationFrame ********************************/
+    // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
+    // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+    requestAnimationFrame: (fn) => {
+      if (!window.requestAnimationFrame) {
+        window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
+      }
+      window.requestAnimationFrame(fn)
+    },
+    dark: {},
+  };
+
+  // utils.dark.mode 当前模式 dark or light
+  // utils.dark.toggle() 暗黑模式触发器
+  // utils.dark.push(callBack[,"callBackName"]) 传入触发器回调函数
+  utils.dark.method = {
+    toggle: new RunItem(),
+  };
+  utils.dark = Object.assign(utils.dark, {
+    push: utils.dark.method.toggle.push,
+  });
+</script>
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+<script type="text/javascript">
+  (() => {
+    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+    for (const tagSwitcher of tagSwitchers) {
+      tagSwitcher.addEventListener('click', (e) => {
+        const parent = e.target.closest('.tag-subtree.parent-tag')
+        parent.classList.toggle('expanded')
+        e.preventDefault()
+      })
+    }
+
+    // Get active tag from query string, then activate it.
+    const urlParams = new URLSearchParams(window.location.search)
+    const activeTag = urlParams.get('tag')
+    if (activeTag) {
+      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
+      if (tag) {
+        tag.querySelector('a').classList.add('active')
+        
+        while (tag) {
+          tag.classList.add('expanded')
+          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
+        }
+      }
+    }
+  })()
+</script>
+
+
+<!-- required -->
+<script src="/js/main.js?v=1.30.0" defer></script>
+
+<script type="text/javascript">
+  const applyTheme = (theme) => {
+    if (theme === 'auto') {
+      document.documentElement.removeAttribute('data-theme')
+    } else {
+      document.documentElement.setAttribute('data-theme', theme)
+    }
+
+    applyThemeToGiscus(theme)
+  }
+
+  const applyThemeToGiscus = (theme) => {
+    theme = theme === 'auto' ? 'preferred_color_scheme' : theme
+
+    const cmt = document.getElementById('giscus')
+    if (cmt) {
+      // This works before giscus load.
+      cmt.setAttribute('data-theme', theme)
+    }
+
+    const iframe = document.querySelector('#comments > section.giscus > iframe')
+    if (iframe) {
+      // This works after giscus loaded.
+      const src = iframe.src
+      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
+      iframe.src = newSrc
+    }
+  }
+
+  const switchTheme = () => {
+    // light -> dark -> auto -> light -> ...
+    const currentTheme = document.documentElement.getAttribute('data-theme')
+    let newTheme;
+    switch (currentTheme) {
+      case 'light':
+        newTheme = 'dark'
+        break
+      case 'dark':
+        newTheme = 'auto'
+        break
+      default:
+        newTheme = 'light'
+    }
+    applyTheme(newTheme)
+    window.localStorage.setItem('Stellar.theme', newTheme)
+    utils.dark.mode = newTheme === 'auto' ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light") : newTheme;
+    utils.dark.method.toggle.start();
+
+    const messages = {
+      light: `切换到浅色模式`,
+      dark: `切换到深色模式`,
+      auto: `切换到跟随系统配色`,
+    }
+    hud?.toast?.(messages[newTheme])
+  }
+
+  (() => {
+    // Apply user's preferred theme, if any.
+    const theme = window.localStorage.getItem('Stellar.theme')
+    if (theme !== null) {
+      applyTheme(theme)
+    } else {
+      utils.dark.mode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    utils.dark.method.toggle.start();
+  })()
+</script>
+
+
+<!-- optional -->
+
+  <script type="module">
+  const el = document.querySelector('#comments #giscus');
+  util.viewportLazyload(el, load_discus, true);
+
+  function load_discus() {
+    if (!el) return;
+    try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.error(error);
+      }
+      const script = document.createElement('script');
+      script.async = true;
+      for (const key of Object.keys(el.attributes)) {
+        const attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
+  }
+</script>
+
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"},"voice":{"js":"/js/plugins/voice.js"},"video":{"js":"/js/plugins/video.js"},"download-file":{"js":"/js/plugins/download-file.js"},"twikoo":{"js":"/js/services/twikoo_latest_comment.js"},"waline":{"js":"/js/services/waline_latest_comment.js"},"artalk":{"js":"/js/services/artalk_latest_comment.js"},"giscus":{"js":"/js/services/giscus_latest_comment.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else if (id == 'voice') {
+        ctx.voiceAudios = document.querySelectorAll('.voice>audio');
+        if (ctx.voiceAudios?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            createVoiceDom(ctx.voiceAudios);
+          });
+        }
+      } else if (id == 'video') {
+        ctx.videos = document.querySelectorAll('.video>video');
+        if (ctx.videos?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            videoEvents(ctx.videos);
+          });
+        }
+      } else if (id == 'download-file') {
+        ctx.files = document.querySelectorAll('.file');
+        if (ctx.files?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            downloadFileEvent(ctx.files);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+
+    // chat iphone time
+    let phoneTimes = document.querySelectorAll('.chat .status-bar .time');
+
+    if (phoneTimes.length > 0) {
+      NowTime();
+      var date = new Date();
+      var sec = date.getSeconds();
+      var firstAdjustInterval = setInterval(firstAdjustTime, 1000 * (60 - sec));
+    }
+
+    function firstAdjustTime() {
+      NowTime();
+      clearInterval(firstAdjustInterval);
+      setInterval(NowTime, 1000 * 60);
+    }
+
+    function NowTime() {
+      for (let i = 0; i < phoneTimes.length; ++i) {
+        var timeSpan = phoneTimes[i];
+        var date = new Date();
+        var hour = date.getHours();
+        var min = date.getMinutes();
+        timeSpan.innerHTML = check(hour) + ":" + check(min);
+      }
+    };
+
+    function check(val) {
+      if (val < 10) {
+        return ("0" + val);
+      }
+      return (val);
+    }
+
+    // chat quote
+    const chat_quote_obverser = new IntersectionObserver((entries, observer) => {
+      entries.filter((entry) => { return entry.isIntersecting }).sort((a, b) => a.intersectionRect.y !== b.intersectionRect.y ? a.intersectionRect.y - b.intersectionRect.y : a.intersectionRect.x - b.intersectionRect.x).forEach((entry, index) => {
+          observer.unobserve(entry.target);
+          setTimeout(() => {
+            entry.target.classList.add('quote-blink');
+            setTimeout(() => {
+              entry.target.classList.remove('quote-blink');
+            }, 1000);
+          }, Math.max(100, 16) * (index + 1));
+        });
+    });
+
+    var chatQuotes = document.querySelectorAll(".chat .talk .quote");
+    chatQuotes.forEach((quote) => {
+      quote.addEventListener('click', function () {
+        var chatCellDom = document.getElementById("quote-" + quote.getAttribute("quotedCellTag"));
+        if (chatCellDom) {
+          var chatDiv = chatCellDom.parentElement;
+          var mid = chatDiv.clientHeight / 2;
+          var offsetTop = chatCellDom.offsetTop;
+          if (offsetTop > mid - chatCellDom.clientHeight / 2) {
+            chatDiv.scrollTo({
+              top: chatCellDom.offsetTop - mid + chatCellDom.clientHeight / 2,
+              behavior: "smooth"
+            });
+          } else {
+            chatDiv.scrollTo({
+              top: 0,
+              behavior: "smooth"
+            });
+          }
+          chat_quote_obverser.observe(chatCellDom);
+        }
+      });
+    });
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/flying-pages@2/flying-pages.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+</script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css`,
+    js: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js`
+  };
+  var selector = '[data-fancybox]:not(.error)';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const els = document.getElementsByClassName('ds-memos');
+    if (els != undefined && els.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || slide.triggerEl.dataset.caption || null
+        }
+      });
+    })
+  }
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          rewind: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+    processEscapes: true
+  }
+});
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  }
+});
+MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for(i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script>
+<script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/mermaid@v9/dist/mermaid.min.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    var mermaid_config = {
+      startOnLoad: true,
+      theme:
+        "auto" == "auto" &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "neutral",
+      logLevel: 3,
+      themeVariables: {
+        darkMode: true
+      },
+      flowchart: {
+        useMaxWidth: false,
+        htmlLabels: true,
+        curve: "linear"
+      },
+      gantt: {
+        axisFormat: "%Y/%m/%d"
+      },
+      sequence: {
+        actorMargin: 50
+      }
+    }
+    mermaid.initialize(mermaid_config);
+  });
+</script><script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1267519437013349" crossorigin="anonymous"></script>
+</div></body></html>
